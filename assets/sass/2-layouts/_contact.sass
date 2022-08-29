@@ -1,0 +1,166 @@
+//CONTACT PAGE
+/************** ******** **************/
+/************* CONTACT PAGE *************/
+/************** ******** **************/
+.ContactPage
+    #ContactSec
+        padding: 40px 0 55px
+        @media only screen and (min-width: 468px)
+            padding: 55px 0 75px
+        @media only screen and (min-width: 1200px)
+            padding: 70px 0 100px
+        .OuterBox
+            background: #fff
+            @media only screen and (min-width: 1200px)
+                margin: 0 15px
+            .FlxRow
+                @include display
+                >*
+                    width: 100%
+                    padding: 30px 30px 40px
+                    @media only screen and (min-width: 468px)
+                        padding: 50px 50px 65px
+                    @media only screen and (min-width: 992px)
+                        width: 50%
+                    @media only screen and (min-width: 1551px)
+                        padding: 50px 60px 65px
+            .AddrsBox
+                border-bottom: 1px solid rgb(234, 222, 212)
+                @media only screen and (min-width: 992px)
+                    border-bottom: 0px
+                    border-right: 1px solid rgb(234, 222, 212)
+                .Title
+                    font-family: $fontstack2
+                    color: rgb(42, 42, 41)
+                    margin-bottom: 20px
+                    font-weight: 300
+                    font-size: 26px
+                    @media only screen and (min-width: 468px)
+                        margin-bottom: 30px
+                        font-size: 33px
+                    @media only screen and (min-width: 1200px)
+                        font-size: 40px
+                .Addrs
+                    font-size: 13px
+                    color: rgb(39, 39, 39)
+                    text-transform: uppercase
+                    line-height: 30px
+                    margin-bottom: 25px
+                    @media only screen and (min-width: 468px)
+                        margin-bottom: 30px
+                    @media only screen and (min-width: 1200px)
+                        margin-bottom: 40px
+                .ContactInfo
+                    padding-top: 22px
+                    position: relative
+                    @include display
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background-color: rgb(229, 128, 99)
+                        width: 6px
+                        height: 6px
+                    >*
+                        width: 100%
+                        @media only screen and (min-width: 1200px)
+                            width: 50%
+                        @media only screen and (max-width: 1200px)
+                            &:last-child
+                                margin-top: 12px
+
+                    ul
+                        display: flex
+                        display: -webkit-flex
+                        align-items: flex-end
+                        flex-wrap: wrap
+                        li, a
+                            width: 100%
+                            font-size: 13px
+                            color: rgb(39, 39, 39)
+                            text-transform: uppercase
+                        li
+                            &:not(:last-child)
+                                margin-bottom: 12px
+                .StaYConnctd
+                    position: relative
+                    padding-top: 22px
+                    margin-top: 35px
+                    @media only screen and (min-width: 468px)
+                        margin-top: 45px
+                    @media only screen and (min-width: 1200px)
+                        margin-top: 65px
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background-color: rgb(229, 128, 99)
+                        width: 6px
+                        height: 6px
+                    .label
+                        font-size: 14px
+                        color: rgb(92, 92, 92)
+                        margin-bottom: 8px
+                    .Flx
+                        @media only screen and (min-width: 1200px)
+                            display: flex
+                    ul
+                        display: flex
+                        display: -webkit-flex
+                        align-items: center
+                        li
+                            &:not(:last-of-type)
+                                margin-right: 30px
+                                @media only screen and (min-width: 1551px)
+                                    margin-right: 50px
+                        a
+                            svg
+                                width: 16px
+                    .location
+                        font-size: 13px
+                        letter-spacing: 1px
+                        font-family: $fontstack2
+                        color: rgb(229, 128, 99)
+                        text-transform: uppercase
+                        display: flex
+                        align-items: center
+                        margin-top: 30px
+                        @media only screen and (min-width: 1200px)
+                            margin-top: 0px
+                            margin-left: 110px
+                        svg
+                            width: 15px
+                            fill: rgb(229, 128, 99)
+                            margin-right: 18px
+            .FormSec
+                @media only screen and (min-width: 1551px)
+                    padding-left: 70px
+                form
+                    .FormHead
+                        font-size: 20px
+                        color: rgb(42, 42, 41)
+                        text-transform: uppercase
+                        margin-bottom: 20px
+                        letter-spacing: 1px
+                    .row
+                        margin: -4.5px
+                        >*
+                            padding: 4.5px
+                    .form-control, .btn
+                        height: 45px
+                        @media only screen and (min-width: 468px)
+                            height: 50px
+                    .btn
+                        margin-top: 20px
+                        margin-left: 0
+                        min-width: 180px
+                        @media only screen and (min-width: 468px)
+                            font-size: 16px
+                            min-width: 230px
+
+    #InstaFeed
+        background: #fff
+        @media only screen and (min-width: 1200px)
+            padding: 85px 0 100px

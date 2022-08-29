@@ -1,0 +1,878 @@
+//MODULES
+/*********SEARCH_MODAl*********/
+.SearchModal
+    z-index: 9999
+    .modal-dialog
+        margin: 0
+        max-width: 100%
+    .modal-content
+        border: 0
+        border-radius: 0
+        // height: 100vh
+    .modal-header
+        padding: 0
+        align-items: center
+        border: none
+        border-radius: 0
+        [data-bs-dismiss="modal"]
+            width: 55px
+            // height: 55px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: transparent
+            border: none
+            outline: none
+            box-shadow: none
+            height: 62px
+            @media only screen and (min-width: 468px)
+                height: 60px
+            @media only screen and (min-width: 992px)
+                height: 78px
+            @media only screen and (min-width: 1551px)
+                height: 89px
+            svg
+                width: 24px
+                height: 24px
+        .searchBox
+            width: calc(100% - 55px)
+            position: relative
+            overflow: hidden
+            align-items: center
+            display: none
+            @include display
+            form
+                width: 100%
+            .form-group
+                border: none
+                overflow: hidden
+                border-radius: 3px
+                align-items: center
+                @include display
+            .form-control
+                background-color: rgb(255, 255, 255)
+                width: calc(100% - 63px)
+                border: none
+                font-size: 16px
+                color: rgb(58, 58, 58)
+                padding: 10px 0px
+                height: 62px
+                @media only screen and (min-width: 468px)
+                    height: 60px
+                @media only screen and (min-width: 992px)
+                    height: 78px
+                @media only screen and (min-width: 1551px)
+                    height: 89px
+                &::placeholder
+                    color: rgb(58, 58, 58)
+            .sendBtn
+                width: 63px
+                min-width: auto
+                border: none
+                background: transparent
+                background-color: rgb(255, 255, 255)
+                height: 62px
+                margin: 0
+                @media only screen and (min-width: 468px)
+                    height: 60px
+                @media only screen and (min-width: 992px)
+                    height: 78px
+                @media only screen and (min-width: 1551px)
+                    height: 89px
+                svg
+                    width: 19px
+                    fill: $basecolor
+        .SearchBtn
+            display: flex
+            align-items: center
+            svg
+                fill: $white
+                width: 25px
+/******* SCROLL UP *******/
+.scrollup
+    width: 35px
+    position: fixed
+    right: 10px
+    bottom: 55px
+    display: none
+    z-index: 5
+    color: $basecolor
+    text-transform: uppercase
+    text-align: center
+    font-size: 10px
+    @media only screen and (min-width: 468px)
+        font-size: 12px
+        bottom: 45px
+    @media only screen and (min-width: 576px)
+        width: 40px
+        right: 20px
+    svg
+        fill: $basecolor
+        margin-bottom: 10px
+        width: 28px
+        height: 28px
+        @media only screen and (min-width: 468px)
+            width: 37px
+            height: 37px
+    &:hover
+        color: $basecolor
+
+/*******FIXED*******/
+.fixedRit
+    position: fixed
+    z-index: 5
+    right: 8px
+    top: 50%
+    transform: translateY(-50%)
+    ul
+        display: flex
+        align-items: center
+        li
+            transition: all .3s
+            transition-delay: .3s
+            &:not(:last-of-type)
+                margin-bottom: 4px
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            padding: 5px
+            height: 40px
+            width: 40px
+            transition: all .3s
+            fill: $white
+            text-transform: uppercase
+            border-radius: 5px
+            background-color: rgb(42, 42, 42)
+            border: 1px solid $basecolor
+            @media only screen and (min-width: 992px)
+                width: 52px
+                height: 52px
+            svg
+                width: 20px
+                display: block
+                transition: all .3s
+                @media only screen and (min-width: 992px)
+                    width: 29px
+    .MobShare
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 5px
+        height: 40px
+        width: 40px
+        background: $white
+        transition: all .3s
+        border: 1px solid rgba(95, 57, 21, 0.23)
+        margin-top: 4px
+        position: relative
+        @media only screen and (min-width: 992px)
+            display: none
+        svg
+            display: block
+            fill: $black
+            transition: all .3s
+            width: 20px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        #share
+            opacity: 1
+        #close
+            width: 17px
+            opacity: 0
+        &.open
+            #share
+                opacity: 0
+            #close
+                opacity: 1
+
+// CART_POPUP
+#cartPop
+    position: fixed
+    top: 0
+    visibility: hidden
+    height: 100vh
+    max-height: none
+    z-index: 20
+    -webkit-box-shadow: none
+    box-shadow: none
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    right: 0
+    left: auto
+    transition: ease-in-out .3s
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    z-index: 9999
+    @media only screen and (min-width: 468px)
+        height: 100vh
+    .modal-body
+        padding-bottom: 71px
+        @media only screen and (min-width: 468px)
+            padding-bottom: 0px
+    &.scrolled
+        height: 100vh
+        .modal-body
+            padding-bottom: 0px
+            @media only screen and (min-width: 468px)
+                padding-bottom: 0px
+    &.show
+        visibility: visible
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+    .modal-dialog
+        width: 100%
+        max-width: 100%
+        @media only screen and (min-width: 576px)
+            margin-top: 0px
+            margin-right: 0px
+            max-width: 510px
+        @media only screen and (max-width: 576px)
+            margin: 0px
+    .modal-content
+        border-radius: 0px
+        border: none
+    .modal-header
+        border: none
+        font-family: $fontstack2
+        margin: 0 15px
+        outline: none
+        border-bottom: 1px solid rgba(229, 128, 99, 0.30)
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        border-radius: 0px
+        position: relative
+        font-size: 18px
+        color: rgb(50, 50, 50)
+        padding: 15px 0
+        @media only screen and (min-width: 468px)
+            margin: 0 40px
+        @media only screen and (min-width: 576px)
+            padding: 20px 0
+        @media only screen and (min-width: 1200px)
+            padding: 40px 0 30px
+
+        .close
+            border: none
+            background: transparent
+            outline: none
+            box-shadow: none
+            margin: 0px
+            padding: 0px
+            display: flex
+            transition: all .3s
+            width: 18px
+            height: 18px
+            margin-right: 20px
+            @media only screen and (min-width: 468px)
+                width: 20px
+                height: 20px
+                margin-right: 35px
+            svg
+                width: 19px
+    .modal-body
+        padding: 0px
+        padding: 0px 15px
+        @media only screen and (min-width: 468px)
+            padding: 0px 40px
+        .limit
+            min-height: calc(100vh - 294px)
+            max-height: calc(100vh - 294px)
+            overflow-y: scroll
+            overflow-x: hidden
+            @media only screen and (min-width: 576px)
+                min-height: calc(100vh - 255px)
+                max-height: calc(100vh - 255px)
+            &::-webkit-scrollbar
+                width: 0px
+        .cartList
+            .itm
+                display: -ms-flexbox
+                display: flex
+                -ms-flex-wrap: wrap
+                flex-wrap: wrap
+                padding: 15px 0px
+                position: relative
+                @media only screen and (min-width: 468px)
+                    padding: 20px 0px
+                @media only screen and (min-width: 1200px)
+                    padding: 30px 0px
+                &:not(:last-of-type)
+                    border-bottom: 1px solid rgba(229, 128, 99, 0.30)
+                .remove
+                    position: absolute
+                    width: 14px
+                    right: 0px
+                    top: 10px
+                    svg
+                        opacity: 0.70
+                        transition: transform 250ms ease-in-out 0s
+                    @media only screen and (min-width: 768px)
+                        top: 15px
+                    @media only screen and (min-width: 992px)
+                        top: 20px
+                    @media only screen and (min-width: 1200px)
+                        top: 25px
+                    &:hover
+                        svg
+                            transform: rotate(90deg)
+                .imgBox
+                    overflow: hidden
+                    width: 97px
+                    height: 135px
+                    @media only screen and (min-width: 468px)
+                        height: auto
+                    a
+                        height: 100%
+                        display: block
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .itmWrap
+                    margin: 0px
+                    line-height: 20px
+                    color: rgb(33, 42, 47)
+                    letter-spacing: 0.5px
+                    font-size: 12px
+                    font-weight: 400
+                    // white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    width: calc(100% - 97px)
+                    padding: 0 15px
+                    @media only screen and (min-width: 1200px)
+                        padding: 0 30px
+                    .ProMainInfo
+                        display: block
+                        width: 100%
+                        margin-bottom: 10px
+                        @media only screen and (min-width: 1200px)
+                            margin-bottom: 20px
+                        .ProName
+                            color: #000
+                            margin-bottom: 5px
+                            font-size: 17px
+                            @media only screen and (min-width: 468px)
+                                font-size: 18px
+                        .Collection
+                            letter-spacing: 1px
+                            color: rgb(130, 129, 129)
+                            font-size: 11px
+                            @media only screen and (min-width: 468px)
+                                font-size: 13px
+
+                        .PriceWrp
+                            font-size: 13px
+                            margin: 0 -4px
+                            padding-top: 11px
+                            @media only screen and (min-width: 468px)
+                                padding-top: 20px
+                                font-size: 15px
+                            span
+                                padding: 0 4px
+                                display: block
+                                @media only screen and (min-width: 468px)
+                                    display: inline
+                            .CPrice
+                                color: rgb(33, 33, 33)
+                                font-weight: 500
+                            .APrice
+                                color: rgb(116, 115, 115)
+                                text-decoration: line-through
+                                margin-top: 5px
+                                @media only screen and (min-width: 468px)
+                                    margin-top: 0px
+
+    .modal-footer
+        background: $white
+        border-radius: 0
+        padding: 20px 15px 10px
+        border-top: 1px solid rgba(229, 128, 99, 0.30)
+        @media only screen and (min-width: 468px)
+            padding: 30px 35px 15px
+        .CartOrderSummary
+            width: 100%
+            margin-bottom: 13px
+            @media only screen and (min-width: 468px)
+                margin-bottom: 20px
+            .CartOrderSummary__item
+                display: flex
+                align-items: center
+                -webkit-box-pack: justify
+                justify-content: space-between
+                text-transform: uppercase
+                color: $basecolor
+                .Itmlabel
+                    font-family: $fontstack2
+                    font-size: 17px
+                    font-weight: 300
+                    color: rgb(52, 51, 51)
+                    @media only screen and (min-width: 468px)
+                        font-size: 18px
+                .ItmValue
+                    font-size: 14px
+                    color: rgb(33, 33, 33)
+                    font-weight: 500
+                    @media only screen and (min-width: 468px)
+                        font-size: 15px
+                &:not(:last-of-type)
+                    margin-bottom: 12px
+        .BtnSec
+            width: 100%
+            margin: 0
+            @include display
+            li
+                width: 100%
+                padding: 4px
+            a
+                border: none
+                background-color: rgb(255, 255, 255)
+                width: 100%
+                height: 45px
+                font-size: 16px
+                letter-spacing: 1px
+                text-transform: uppercase
+                color: $basecolor
+                @media only screen and (min-width: 468px)
+                    height: 50px
+                &::before
+                    background: $basecolor2
+                svg
+                    width: 4px
+                    margin-left: 12px
+                    margin-top: -2px
+                &.checkout
+                    background: $basecolor
+                    color: $white
+                &:hover
+                    color: #fff
+                    svg
+                        fill: #fff
+
+// MobMenu
+#MobMenu
+    position: fixed
+    bottom: 0px
+    width: 100%
+    background: rgb(255, 255, 255)
+    z-index: 999
+    border-top: 1px solid rgb(245, 242, 242)
+    @media screen and (min-width: 768px)
+        display: none
+
+    ul
+        display: flex
+        align-items: center
+        margin: 0px
+        li
+            width: 20%
+            a
+                display: block
+                text-align: center
+                padding: 12px 2px
+                svg
+                    width: 22px
+                    height: 22px
+                    fill: $basecolor
+                    &#homeIcon
+                        fill: none
+                        stroke: $basecolor
+                        stroke-width: 2px
+                    &#OfferIcon
+                        fill: $basecolor
+                .txt
+                    font-size: 11px
+                    color: #000
+                    margin-top: 8px
+                    text-transform: uppercase
+                .icon
+                    position: relative
+                    width: fit-content
+                    width: -moz-fit-content
+                    margin: auto
+                    .cartCount
+                        position: absolute
+                        right: 0px
+                        left: 4px
+                        margin: auto
+                        font-size: 9px
+                        color: $white
+                        top: -10px
+                        text-align: center
+                        background: $basecolor2
+                        padding: 5px
+                        border-radius: 50%
+                        width: 18px
+                        height: 18px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        font-weight: 700
+                &.active, &:hover
+                    svg, path, rect
+                        fill: $basecolor
+                        stroke: none
+
+// COLLECTIONS BOX
+.CollctnBox
+    display: block
+    position: relative
+    text-align: center
+    width: 100%
+    height: 100%
+    .ImgBox
+        position: relative
+        width: 100%
+        overflow: hidden
+        background: #000
+        height: 255px
+        @media only screen and (min-width: 468px)
+            height: 315px
+        @media only screen and (min-width: 768px)
+            height: 350px
+        @media only screen and (min-width: 992px)
+            height: 415px
+        @media only screen and (min-width: 1200px)
+            height: 100%
+            max-height: 830px
+        &::after
+            content: ""
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 55%
+            background: rgb(50,50,50)
+            background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
+            background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1)
+            opacity: 0.80
+            transition: all .5s
+        img
+            transform-origin: center
+            transform: scale(1.08)
+            transition: all .5s
+            @include imgFit
+    .ProInfo
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        z-index: 1
+        letter-spacing: 1px
+        padding: 0 15px
+        height: fit-content
+        // bottom: 25px
+        transition: all .8s
+        transform: translateY(-25px)
+        @media only screen and (min-width: 468px)
+            transform: translateY(-35px)
+        @media only screen and (min-width: 576px)
+            transform: translateY(-45px)
+        .ProName
+            font-weight: 300
+            font-size: 18px
+            font-family: $fontstack2
+            color: rgb(255, 255, 255)
+            text-transform: uppercase
+            margin-bottom: 3px
+            @media only screen and (min-width: 468px)
+                font-size: 20px
+            @media only screen and (min-width: 768px)
+                font-size: 24px
+            @media only screen and (min-width: 1200px)
+                font-size: 30px
+            @media only screen and (min-width: 1551px)
+                font-size: 35px
+        .ProTag
+            color: $baselit
+            font-size: 12px
+            @media only screen and (min-width: 768px)
+                font-size: 13px
+            @media only screen and (min-width: 1200px)
+                font-size: 16px
+        .btn
+            margin-top: 18px
+            @media only screen and (min-width: 468px)
+                margin-top: 25px
+    &:not(:hover)
+        .btn
+            margin: 0 auto
+            height: 0
+            opacity: 0
+    &:hover
+        .ImgBox
+            &::after
+                opacity: 0
+                height: 100%
+            img
+                opacity: 0.40
+                transform: scale(1)
+        .ProInfo
+            transform: translateY(50%)
+            bottom: 50%
+        .btn
+            transition-delay: .3s
+
+// PRODUCT BOX
+.ProBox
+    display: block
+    position: relative
+    width: 100%
+    height: 100%
+    .ImgBox
+        position: relative
+        width: 100%
+        overflow: hidden
+        background: #000
+        height: 255px
+        @media only screen and (min-width: 468px)
+            height: 315px
+        @media only screen and (min-width: 768px)
+            height: 350px
+        @media only screen and (min-width: 992px)
+            height: 415px
+        img
+            transform-origin: center
+            transform: scale(1.08)
+            transition: all .5s
+            @include imgFit
+        .Tag
+            position: absolute
+            height: 25px
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 5px
+            width: fit-content
+            width: -moz-fit-content
+            z-index: 1
+            color: rgb(0, 0, 0)
+            font-weight: 500
+            text-transform: uppercase
+            background: #fff
+            font-size: 10px
+            left: 10px
+            top: 10px
+            @media only screen and (min-width: 468px)
+                left: 13px
+                top: 13px
+                font-size: 12px
+            &.StockOut
+                background: $basecolor
+                color: #fff
+    .ProInfo
+        padding-top: 15px
+        .ProName
+            color: #000
+            margin-bottom: 5px
+            font-size: 17px
+            @media only screen and (min-width: 468px)
+                font-size: 18px
+        .Collection
+            letter-spacing: 1px
+            color: rgb(98, 98, 98)
+            font-size: 11px
+            @media only screen and (min-width: 468px)
+                font-size: 13px
+
+        .PriceWrp
+            font-size: 13px
+            margin: 0 -4px
+            padding-top: 11px
+            @media only screen and (min-width: 468px)
+                padding-top: 20px
+                font-size: 15px
+            >*
+                padding: 0 4px
+                display: block
+                @media only screen and (min-width: 468px)
+                    display: inline
+            .CPrice
+                color: rgb(33, 33, 33)
+                font-weight: 500
+            .APrice
+                color: rgb(116, 115, 115)
+                text-decoration: line-through
+                margin-top: 5px
+                @media only screen and (min-width: 468px)
+                    margin-top: 0px
+    &:hover
+        .ImgBox
+            &::after
+                opacity: 0
+                height: 100%
+            img
+                opacity: 0.40
+                transform: scale(1)
+
+.CartAnimBtn
+    position: relative
+    overflow: hidden
+    .Txt
+        position: absolute
+        z-index: 3
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        &.AddToCart
+            position: absolute
+            display: flex
+            align-items: center
+            -webkit-box-pack: center
+            justify-content: center
+            opacity: 1
+            width: 100%
+            height: 100%
+            user-select: none
+        &.AddedToCart
+            opacity: 0
+            display: flex
+            -webkit-box-pack: center
+            justify-content: center
+            -webkit-box-align: center
+            align-items: center
+            width: 100%
+            height: 100%
+            user-select: none
+            opacity: 0
+            transition: all .3s
+            color: #fff
+    #CartIcon
+        position: absolute
+        z-index: 2
+        top: 50%
+        left: -15%
+        font-size: 2em
+        transform: translate(-50%, -50%)
+        width: 26px
+        height: auto
+        fill: #fff
+    .CountIcon
+        position: absolute
+        z-index: 3
+        top: -20%
+        left: 50%
+        font-size: 1.2em
+        transform: translate(-50%, -50%)
+        width: 11px
+        height: auto
+        fill: $basecolor
+        svg
+            margin: 0
+    &.CartMsg
+        background: #000 !important
+        .Txt
+            &.AddToCart
+                opacity: 0
+                svg
+                    fill: #000 !important
+            &.AddedToCart
+                opacity: 1
+                transition-delay: 2.3s
+        #CartIcon
+            top: 50%
+            left: -10%
+            animation: 2450ms ease-in-out 0s 1 normal forwards running CartIcon
+            @keyframes CartIcon
+                0%
+                    left: -10%
+
+                40%, 60%
+                    left: calc(50% - 3px)
+
+                100%
+                    left: calc(115% - 3px)
+
+        .CountIcon
+            top: -20%
+            left: 50%
+            animation: 2450ms ease-in-out 0s 1 normal forwards running CountIcon
+            @keyframes CountIcon
+                0%, 40%
+                    top: -20%
+                60%
+                    top: 40%
+                    left: 50%
+                100%
+                    top: 40%
+                    left: 115%
+
+.chk_bx
+    display: flex
+    flex-wrap: wrap
+    input[type=checkbox]
+        width: 22px !important
+        height: 22px !important
+        position: relative
+        z-index: 1
+        outline: none
+        visibility: hidden
+        top: 0
+        &::before
+            content: ""
+            cursor: pointer
+            position: absolute
+            left: 0px
+            top: 0px
+            display: inline-block
+            border: 1px solid $basecolor
+            background-color: white
+            visibility: visible
+            width: 22px
+            height: 22px
+            transition: ease-in-out all 0.3s
+        &::after
+            content: ""
+            visibility: visible
+            background: url('../images/tick.svg') no-repeat center
+            filter: invert(1)
+            display: inline-block
+            cursor: pointer
+            width: 10px
+            height: 10px
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            margin: auto
+            background-size: contain
+            opacity: 0
+            visibility: hidden
+            transition: ease-in-out all 0.3s
+        &:checked
+            &::before
+                background: $basecolor
+            &::after
+                opacity: 1
+                visibility: visible
+    label
+        color: #575657
+        font-weight: 400
+        font-size: 13px
+        margin-bottom: 3px
+        width: calc(100% - 22px)
+        padding-left: 13px
+        a
+            font-size: 13px
+            color: $basecolor
+            padding-left: 3px
+            display: inline
+
+body
+    &.hasMobMenu
+        @media only screen and (max-width: 768px)
+            padding-bottom: 69px
+            .scrollup
+                bottom: 90px
+
+    &:not(.hasMobMenu)
+        #MobMenu
+            display: none

@@ -1,0 +1,896 @@
+//DASHBOARD
+/************* ******* *************/
+/************ DASHBOARD ************/
+/************* ******* *************/
+.Dashboard
+    position: relative
+    display: block
+    background: rgb(255, 245, 237) url('../images/BGPatern.webp') repeat
+    .container
+        @media only screen and (min-width: 1200px)
+            padding: 0 50px
+    .MainRow
+        padding: 30px 0 35px
+        @include display
+        @media only screen and (min-width: 468px)
+            padding: 40px 0 80px
+        @media only screen and (min-width: 992px)
+            padding: 75px 0 90px
+        aside
+            width: 100%
+            background: $white
+            @media only screen and (min-width: 992px)
+                width: 285px
+            .TopSec
+                text-align: center
+                background: $basecolor
+                padding: 35px 25px 25px
+                @media only screen and (min-width: 992px)
+                    padding: 35px 25px 30px
+                .DPBOX
+                    border-radius: 50%
+                    background-color: rgb(240, 240, 244)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin: auto
+                    margin-bottom: 22px
+                    width: 92px
+                    height: 92px
+                    position: relative
+                    .ImgBox
+                        overflow: hidden
+                        border-radius: 50%
+                    input[type=file]
+                        position: absolute
+                        width: 29px
+                        height: 29px
+                        border-radius: 50%
+                        font-size: 0
+                        right: -13px
+                        top: 50%
+                        cursor: pointer
+                        opacity: 0
+                        transform: translateY(-50%)
+                    .Cam
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        background: #fff
+                        position: absolute
+                        top: 50%
+                        right: -13px
+                        border-radius: 50%
+                        cursor: pointer
+                        overflow: hidden
+                        width: 29px
+                        height: 29px
+                        transform: translateY(-50%)
+                        svg
+                            fill: $basecolor
+                            width: 17px
+
+                .Name
+                    color: #fff
+                    text-transform: uppercase
+                    font-size: 16px
+                    margin-bottom: 5px
+                .Email
+                    color: #fff
+                    font-size: 13px
+
+            .CntnSec
+                padding: 15px 15px 40px
+                @media only screen and (min-width: 468px)
+                    padding: 35px 35px 25px
+                @media only screen and (min-width: 992px)
+                    min-height: 385px
+                @media only screen and (min-width: 1200px)
+                    min-height: 425px
+                @media only screen and (min-width: 1551px)
+                    min-height: 475px
+                ul
+                    li
+                        a
+                            display: flex
+                            align-items: center
+                            color: rgb(48, 48, 48)
+                            font-size: 14px
+                            padding: 10px 0px
+                            transition: all .3s
+                            @media only screen and (min-width: 468px)
+                                padding: 15px 0px
+                            @media only screen and (min-width: 1441px)
+                                padding: 10px 0px
+                            .icon
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                margin-right: 22px
+                                background: $white
+                                border-radius: 50%
+                                width: 30px
+                                height: 30px
+                                transition: all .3s
+                                svg
+                                    fill: rgb(93, 93, 93)
+                                    transition: all .3s
+                                    width: 22px
+                            &:not(.active), &:not(:hover)
+                                svg
+                                    &#edit
+                                        width: 14px
+                                        @media only screen and (min-width: 468px)
+                                            width: 17px
+                                    &#Logout
+                                        width: 18px
+                            &.active, &:hover
+                                color: $basecolor
+                                .icon
+                                    svg
+                                        fill: $basecolor
+        .MainSide
+            width: 100%
+            padding-top: 30px
+            @media only screen and (min-width: 992px)
+                padding-top: 0px
+                padding-left: 30px
+                width: calc(100% - 285px)
+            .MainSideBox
+                background: $white
+                height: 100%
+                padding: 25px 15px 30px
+                @media only screen and (min-width: 468px)
+                    padding: 35px 35px 45px
+                .TitleSec
+                    margin-bottom: 18px
+                    @media only screen and (min-width: 468px)
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        margin-bottom: 25px
+                    .Title
+                        color: rgb(23, 23, 23)
+                        font-size: 18px
+                        text-transform: uppercase
+                    .add-btn
+                        display: flex
+                        align-items: center
+                        font-size: 12px
+                        color: rgb(79, 78, 79)
+                        text-transform: uppercase
+                        border: none
+                        outline: none
+                        box-shadow: none
+                        background: rgba(229, 128, 99, 0.12)
+                        border: 1px solid $basecolor
+                        padding: 9px 15px
+                        width: 100%
+                        margin-top: 18px
+                        @media only screen and (min-width: 468px)
+                            margin-top: 0
+                            background: none
+                            border: none
+                            padding: 0
+                            width: fit-content
+                            width: -moz-fit-content
+                        svg
+                            margin-right: 15px
+                            width: 19px
+                            fill: $basecolor
+
+                form
+                    .BtnSec
+                        display: flex
+                        align-items: center
+                        margin: -5px
+                        margin-top: 20px
+                        li
+                            padding: 5px
+                            width: 50%
+                            @media only screen and (min-width: 468px)
+                                width: auto
+                        .btn
+                            margin: 0
+                            border-radius: 5px
+                            min-width: 150px
+                            border: 1px solid $basecolor3
+                            height: 37px
+                            &:not(:hover)
+                                &.cancel
+                                    background: transparent
+                                    border-color: rgb(214, 213, 213)
+                                    color: rgb(22, 22, 22)
+                            &:hover
+                                color: #fff
+
+                .order-box
+                    border: 1px solid #f4e9e0
+                    border-radius: 3px
+                    &:not(:last-child)
+                        margin-bottom: 25px
+                    .num
+                        background-color: rgb(255, 245, 237)
+                        padding: 17px 15px
+                        display: block
+                        @media only screen and ( min-width: 992px )
+                            padding: 17px 30px
+                            display: flex
+                        .id
+                            font-size: 13px
+                            color: rgb(32, 32, 32)
+                            span
+                                color: $basecolor
+                        .date
+                            font-size: 12px
+                            color: rgb(32, 32, 32)
+                            margin-left: 0
+                            padding: 10px 0
+                            @media only screen and ( min-width: 992px)
+                                margin-left: 40px
+                                padding: 0
+                        .view-btn
+                            font-size: 12px
+                            color: rgb(32, 32, 32)
+                            margin-left: auto
+                            position: relative
+                            display: flex
+                            align-items: center
+                            @media only screen and (min-width: 992px)
+                                justify-content: center
+                            svg
+                                width: 6px
+                                fill: $basecolor
+                                margin-left: 17px
+                            &:hover
+                                color: $basecolor
+                        .status
+                            font-size: 12px
+                            color: #5e5d5d
+                            margin-left: auto
+                            span
+                                color: $basecolor
+                                text-transform: uppercase
+                                font-weight: 600
+                    .OrderListBox
+                        padding: 15px
+                        margin: -5px
+                        @include display
+                        @media only screen and (min-width: 468px)
+                            padding: 30px 25px
+                            margin: -10px
+                        .OrderListItm
+                            width: 100%
+                            padding: 5px
+                            @media only screen and (min-width: 468px)
+                                width: 50%
+                                padding: 10px
+                        .OrderPro
+                            border: 1px solid rgb(236, 224, 214)
+                            padding: 10px
+                            @include display
+                            .ProImg
+                                width: 75px
+                                @media only screen and (min-width: 468px)
+                                    width: 100%
+                                @media only screen and (min-width: 768px)
+                                    width: 75px
+                            .Proinfo
+                                width: calc(100% - 75px)
+                                padding-left: 15px
+                                @media only screen and (min-width: 468px)
+                                    width: 100%
+                                    padding-top: 15px
+                                    padding-left: 0px
+                                @media only screen and (min-width: 768px)
+                                    width: calc(100% - 75px)
+                                    padding-top: 0px
+                                    padding-left: 15px
+                                @media only screen and (min-width: 1200px)
+                                    padding-left: 23px
+
+                                .ProHeader
+                                    .ProName
+                                        color: #000
+                                        margin-bottom: 5px
+                                        font-size: 16px
+                                    .Collection
+                                        letter-spacing: 1px
+                                        color: rgb(130, 129, 129)
+                                        font-size: 11px
+                                        @media only screen and (min-width: 468px)
+                                            font-size: 13px
+
+                                    .PriceWrp
+                                        font-size: 13px
+                                        margin: 0 -4px
+                                        padding-top: 10px
+                                        @media only screen and (min-width: 468px)
+                                            font-size: 15px
+                                        span
+                                            padding: 0 4px
+                                            display: block
+                                            @media only screen and (min-width: 468px)
+                                                display: inline
+                                        .CPrice
+                                            color: rgb(33, 33, 33)
+                                            font-weight: 500
+                                        .APrice
+                                            color: rgb(116, 115, 115)
+                                            text-decoration: line-through
+                                            margin-top: 5px
+                                            @media only screen and (min-width: 468px)
+                                                margin-top: 0px
+                                    .Qty
+                                        font-size: 14px
+                                        color: rgb(54, 54, 54)
+                                        margin-top: 13px
+
+                .order-address
+                    // padding: 45px 35px
+                    .inner-box
+                        .add-box
+                            border-bottom: 1px solid rgb(242, 231, 223)
+                            padding: 30px 15px 10px
+                            @media only screen and ( min-width: 992px )
+                                padding: 30px 35px 25px
+                            .head
+                                font-size: 14px
+                                text-transform: uppercase
+                                color: $basecolor
+                                text-transform: uppercase
+                                margin-bottom: 10px
+                                @media only screen and ( min-width: 992px )
+                                    margin-bottom: 15px
+                                svg
+                                    width: 15px
+                                    fill: $basecolor
+                                    margin-right: 15px
+                            .detail-box
+                                width: 100%
+                                padding-left: 30px
+                                @media only screen and ( min-width: 992px )
+                                    display: flex
+                                .name-box
+                                    @media only screen and ( min-width: 992px )
+                                        width: 100%
+                                    @media only screen and ( min-width: 1200px )
+                                        width: 50%
+                                    .name
+                                        font-size: 14px
+                                        color: rgb(41, 41, 42)
+                                        margin-bottom: 8px
+                                .location
+                                    padding: 10px 30px
+                                    font-size: 14px
+                                    line-height: 20px
+                                    color: #5f5f5f
+                                    @media only screen and ( min-width: 992px )
+                                        padding: 0 80px
+                        .OrderPro
+                            padding: 20px 15px 30px
+                            @include display
+                            @media only screen and ( min-width: 992px )
+                                padding: 25px 35px 40px
+                            .ProImg
+                                width: 75px
+                                @media only screen and (min-width: 468px)
+                                    width: 100%
+                                @media only screen and (min-width: 768px)
+                                    width: 75px
+                                img
+                                    @include imgFit
+                            .Proinfo
+                                width: calc(100% - 75px)
+                                padding-left: 15px
+                                max-width: 420px
+                                @media only screen and (min-width: 468px)
+                                    width: 100%
+                                    padding-top: 15px
+                                    padding-left: 0px
+                                @media only screen and (min-width: 768px)
+                                    width: calc(100% - 75px)
+                                    padding-top: 0px
+                                    padding-left: 15px
+                                @media only screen and (min-width: 1200px)
+                                    padding-left: 35px
+
+                                .ProHeader
+                                    .ProName
+                                        color: #000
+                                        margin-bottom: 5px
+                                        font-size: 16px
+                                    .Collection
+                                        letter-spacing: 1px
+                                        color: rgb(130, 129, 129)
+                                        font-size: 11px
+                                        @media only screen and (min-width: 468px)
+                                            font-size: 13px
+                                    .Flx
+                                        display: flex
+                                        justify-content: space-between
+                                    .PriceWrp
+                                        font-size: 13px
+                                        margin: 0 -4px
+                                        padding-top: 10px
+                                        @media only screen and (min-width: 468px)
+                                            font-size: 15px
+                                        span
+                                            padding: 0 4px
+                                            display: block
+                                            @media only screen and (min-width: 468px)
+                                                display: inline
+                                        .CPrice
+                                            color: rgb(33, 33, 33)
+                                            font-weight: 500
+                                        .APrice
+                                            color: rgb(116, 115, 115)
+                                            text-decoration: line-through
+                                            margin-top: 5px
+                                            @media only screen and (min-width: 468px)
+                                                margin-top: 0px
+                                    .Qty
+                                        font-size: 14px
+                                        color: rgb(54, 54, 54)
+                                        margin-top: 13px
+                                    .CnclBtn
+                                        margin: 0
+                                        margin-top: 15px
+                                        background: none
+                                        box-shadow: none
+                                        border: 1px solid rgb(229, 128, 99)
+                                        border-radius: 3px
+                                        width: 105px
+                                        height: 35px
+                                        font-size: 13px
+                                        color: rgb(45, 46, 46)
+                                        min-width: auto
+                                        &:hover
+                                            background: $basecolor
+                                            color: #fff
+                    .outer-box
+                        border-top: 1px solid rgb(242, 231, 223)
+                        .inner-box2
+                            padding: 20px 15px
+                            @media only screen and ( min-width: 576px )
+                                display: flex
+                            @media only screen and ( min-width: 768px )
+                                display: block
+                            @media only screen and ( min-width: 992px )
+                                padding: 30px 35px 60px
+                                display: flex
+                            .note
+                                width: 100%
+                                @media only screen and ( min-width: 576px )
+                                    width: 50%
+                                @media only screen and ( min-width: 768px )
+                                    width: 100%
+                                @media only screen and ( min-width: 992px )
+                                    width: 50%
+                                .note-heading
+                                    font-size: 14px
+                                    color: #191919
+                                    font-weight: 500
+                                .note-disc
+                                    font-size: 14px
+                                    color: #6f6f6f
+                                .btn-sec
+                                    .review-btn
+                                        background: none
+                                        border: 1px solid #32a931
+                                        font-size: 14px
+                                        color: #191919
+                                        width: 100px
+                                        height: 35px
+                                        border-radius: 3px
+                                        margin: 15px 0
+                                        @media only screen and ( min-width: 992px )
+                                            margin: 20px 0 0
+                                        &:hover
+                                            background: #32a931
+                                            color: $white
+                            .amount-box
+                                display: flex
+                                flex-wrap: wrap
+                                margin-left: auto
+                                text-align: right
+                                ul
+                                    list-style: none
+                                    padding: 0
+                                    width: 325px
+                                    li
+                                        display: flex
+                                        margin: 0 -10px
+                                        &:not(:last-of-type)
+                                            margin-bottom: 10px
+                                        >*
+                                            width: 50%
+                                            padding: 0 10px
+                                        .name
+                                            font-size: 14px
+                                            color: #1a1a1a
+                                            padding-right: 65px
+                                            position: relative
+                                            &::after
+                                                content: ":"
+                                                position: absolute
+                                                right: 0
+                                                top: 0
+
+                                        .value
+                                            font-size: 13px
+                                            color: #212121
+                                            position: relative
+                                            span
+                                                font-size: 16px
+                                                font-weight: 500
+
+                .accordion-item
+                    border: none
+                    .accordion-body
+                        padding: 0
+                        padding-bottom: 35px
+                    form
+                        button[type=submit], .btn
+                            margin-left: 0
+
+                .addresslist
+                    .listFlex
+                        margin: -11px
+                        @include display
+                        .listitm
+                            padding: 11px
+                            width: 100%
+                            @media only screen and (min-width: 768px)
+                                width: 50%
+                            @media only screen and (min-width: 992px)
+                                width: 100%
+                            @media only screen and (min-width: 1200px)
+                                width: 50%
+
+                            .Box
+                                height: 100%
+                                width: 100%
+                                position: relative
+                                label
+                                    height: 100%
+                                    width: 100%
+                                    border: 1px solid rgba(229, 128, 99, 0.30)
+                                    background-color: rgb(255, 255, 255)
+                                    transition: all .3s
+                                    padding: 22px 15px 25px
+                                    @media only screen and (min-width: 468px)
+                                        padding: 25px 25px 30px
+                                .BoxHeader
+                                    display: flex
+                                    align-items: center
+                                    justify-content: space-between
+                                    margin-bottom: 15px
+                                    .button-box
+                                        display: flex
+                                        margin-left: auto
+                                        position: relative
+                                        z-index: 4
+                                        #edit
+                                            width: 19px
+                                            height: 19px
+                                            fill: #fec98b
+                                            cursor: pointer
+                                            &:hover
+                                                fill: $basecolor
+                                        #delete
+                                            width: 18px
+                                            height: 18px
+                                            fill: $basecolor
+                                            margin-left: 15px
+                                            cursor: pointer
+                                .Name
+                                    font-size: 15px
+                                    color: rgb(50, 50, 50)
+                                    svg
+                                        width: 16px
+                                        fill: #a8a7a7
+                                        margin-right: 10px
+                                        transition: all .3s
+                                ul
+                                    padding-left: 30px
+                                    li, a
+                                        font-size: 14px
+                                        color: rgb(50, 50, 50)
+                                        line-height: 24px
+                                input
+                                    position: absolute
+                                    left: 0
+                                    top: 0
+                                    width: 100%
+                                    height: 100%
+                                    opacity: 0
+                                    &:checked
+                                        ~ label
+                                            border-color: $basecolor
+                                            .Name
+                                                svg
+                                                    fill: $basecolor
+                            .address
+                                width: 100%
+                            .AddrsBox
+                                border: 1px solid rgb(246, 243, 237)
+                                display: flex
+                                width: 100%
+                                transition: all .3s
+                                padding: 14px 22px 25px
+                                transition: all .3s
+                                .DetlBox
+                                    width: 100%
+                                    .BoxHeader
+                                        display: flex
+                                        margin-bottom: 14px
+                                        align-items: flex-end
+                                        .AddressCat
+                                            font-family: $fontstack2
+                                            color: rgb(95, 57, 21)
+                                            font-size: 17px
+                                        .button-box
+                                            display: flex
+                                            margin-left: auto
+                                            #edit
+                                                width: 19px
+                                                height: 19px
+                                                fill: #fec98b
+                                                cursor: pointer
+                                                &:hover
+                                                    fill: $basecolor
+                                            #delete
+                                                width: 18px
+                                                height: 18px
+                                                fill: $basecolor
+                                                margin-left: 15px
+                                                cursor: pointer
+                                    .Phone
+                                        ul
+                                            margin: 0
+                                            display: block
+                                        li
+                                            font-size: 14px
+                                            color: rgb(16, 16, 16)
+                                            padding: 0
+                                            font-family: $fontstack2
+                                            &:not(:last-of-type)
+                                                margin-bottom: 3px
+                                    .location
+                                        margin-top: 20px
+                                        .Title
+                                            font-size: 14px
+                                            color: rgb(73, 72, 72)
+                                            margin-bottom: 10px
+                                        p
+                                            font-size: 14px
+                                            font-family: $fontstack2
+                                            color: rgb(73, 72, 72)
+                                            line-height: 17px
+                                            margin: 0
+                                &:hover
+                                    box-shadow: 0px 0px 28.8px 3.2px rgba(22, 23, 30, 0.06)
+
+                #OrderAccord
+                    .accordion-item
+                        margin-bottom: 12px
+                        border: none
+                    .accordion-header
+                        button
+                            background: rgb(246, 243, 237)
+                            height: 43px
+                            justify-content: space-between
+                            border-radius: 0
+                            border: none
+                            box-shadow: none
+                            outline: none
+                            transition: all .3s
+                            position: relative
+                            padding: 5px 45px 5px 20px
+                            &::after
+                                content: "+"
+                                background: none
+                                font-size: 23px
+                                color: rgb(19, 19, 19)
+                                position: absolute
+                                right: 15px
+                                width: auto
+                                height: auto
+                                top: 50%
+                                transition: all .3s
+                                transform: translateY(-50%)
+
+                            .id
+                                font-size: 13px
+                                font-family: $fontstack2
+                                color: rgb(95, 57, 21)
+                                span
+                                    color: rgb(16, 16, 16)
+                            .date
+                                font-size: 11px
+                                font-family: $fontstack2
+                                transition: all .3s
+                                color: rgb(16, 16, 16)
+                                display: none
+                                @media only screen and (min-width: 768px)
+                                    display: block
+                            .ViewBtn
+                                font-size: 12px
+                                font-family: $fontstack2
+                                color: rgb(16, 16, 16)
+                                text-decoration: underline
+                                display: none
+                                @media only screen and (min-width: 768px)
+                                    display: block
+                            &[aria-expanded="true"]
+                                background: $basecolor3
+                                &::after
+                                    content: "-"
+                                .date
+                                    opacity: 0
+                    .accordion-collapse
+                        border: 1px solid rgb(246, 243, 237)
+                    .accordion-body
+                        padding: 18px 18px 20px
+                        .OrderInfo
+                            @include display
+                            justify-content: space-between
+                            border-bottom: 1px solid rgba(123, 122, 122, 0.11)
+                            padding-bottom: 15px
+                            @media only screen and (min-width: 468px)
+                                padding-bottom: 30px
+                            .Box
+                                &:nth-child(1)
+                                    width: 100%
+                                    @media only screen and (min-width: 468px)
+                                        width: 140px
+                                &:nth-child(2)
+                                    margin-top: 15px
+                                    @media only screen and (min-width: 468px)
+                                        margin-top: 0px
+                                .Title
+                                    font-size: 13px
+                                    font-family: $fontstack2
+                                    color: rgb(95, 57, 21)
+                                    margin-bottom: 10px
+                                p
+                                    font-size: 13px
+                                    font-family: $fontstack2
+                                    color: rgb(0, 0, 0)
+                                    line-height: 20px
+                                    margin: 0
+                                ul
+                                    li
+                                        display: flex
+                                        align-items: center
+                                        justify-content: space-between
+                                        font-size: 13px
+                                        font-family: $fontstack2
+                                        &:not(:last-of-type)
+                                            margin-bottom: 8px
+                                        .label
+                                            color: rgb(95, 57, 21)
+                                            min-width: 85px
+                                        .value
+                                            color: #000
+                        .OrderList
+                            padding: 12px 0
+                            margin: -12px 0
+                            @include display
+                            .Item
+                                width: 100%
+                                padding: 12px 0
+                                &:not(:last-of-type)
+                                    border-bottom: 1px solid rgba(123, 122, 122, 0.11)
+                                .Box
+                                    @include display
+                                    .ProImg
+                                        width: 50px
+                                        img
+                                            @include imgFit
+
+                                    .ProInfo
+                                        padding-left: 15px
+                                        width: calc(100% - 50px)
+                                        justify-content: space-between
+                                        display: flex
+                                        align-items: center
+                                        flex-wrap: wrap
+                                        @media only screen and (min-width: 468px)
+                                            padding-left: 35px
+                                        .ProName
+                                            width: 100%
+                                            margin-bottom: 5px
+                                            @media only screen and (min-width: 576px)
+                                                width: 145px
+                                                margin: 0
+                                            @media only screen and (min-width: 768px)
+                                                width: 165px
+
+                                            .Name
+                                                font-size: 16px
+                                                color: rgb(46, 46, 46)
+                                                text-transform: uppercase
+                                                margin-bottom: 3px
+                                                @media only screen and (min-width: 576px)
+                                                    margin-bottom: 9px
+                                            .Id
+                                                font-size: 14px
+                                                color: rgb(123, 122, 122)
+                                        .ProCat
+                                            font-size: 14px
+                                            color: rgb(123, 122, 122)
+                                        .Qty
+                                            font-size: 14px
+                                            color: rgb(123, 122, 122)
+                                            span
+                                                color: rgb(123, 122, 34)
+                                        .Price
+                                            font-size: 14px
+                                            color: rgb(123, 122, 122)
+                                            @media only screen and (max-width: 468px)
+                                                width: 100%
+                                                margin-top: 5px
+                                            span
+                                                color: rgb(123, 122, 34)
+                        .BoxFoot
+                            @include display
+                            justify-content: space-between
+                            border-top: 1px solid rgba(123, 122, 122, 0.11)
+                            padding-top: 15px
+                            @media only screen and (min-width: 468px)
+                                padding-top: 25px
+                            .Box
+                                &:nth-child(1)
+                                    width: 100%
+                                    @media only screen and (min-width: 468px)
+                                        width: 140px
+                                    ul
+                                        li
+                                            .label
+                                                min-width: auto
+                                                text-align: left
+                                &:nth-child(2)
+                                    margin-top: 15px
+                                    @media only screen and (min-width: 468px)
+                                        margin-top: 0px
+                                .Title
+                                    font-size: 16px
+                                    color: rgb(46, 46, 46)
+                                    margin-bottom: 10px
+                                ul
+                                    li
+                                        display: flex
+                                        align-items: center
+                                        justify-content: space-between
+                                        font-size: 13px
+                                        font-family: $fontstack2
+                                        &:not(:last-of-type)
+                                            margin-bottom: 8px
+                                        .label
+                                            color: rgb(123, 122, 122)
+                                            min-width: 130px
+                                            @media only screen and (min-width: 468px)
+                                                text-align: right
+                                        .value
+                                            padding-left: 5px
+                                            color: #000
+                                        &.Total
+                                            font-size: 15px
+                                            @media only screen and (min-width: 468px)
+                                                font-size: 16px
+                                            .label, .value
+                                                color: #000
+
+    &.editProfile
+        .MainRow
+            .MainSide
+                .MainSideBox
+                    padding-right: 145px
+    &.Wishlist
+        .row
+            @media only screen and (min-width: 768px)
+                margin: -8px
+                >*
+                    padding: 8px

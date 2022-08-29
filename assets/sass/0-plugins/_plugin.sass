@@ -1,0 +1,187 @@
+//PLUGIN
+.select2
+    border: 1px solid rgb(214, 211, 211)
+    height: 45px
+    border-radius: 0px
+    transition: all 0.15s
+    width: 100% !important
+    @media only screen and (min-width: 468px)
+        height: 48px
+    @media only screen and (min-width: 992px)
+        height: 50px
+    .select2-selection
+        outline: none !important
+        border: none !important
+        box-shadow: none !important
+        background: url(../images/arrowDown.svg) no-repeat
+        background-size: 8px
+        min-height: 43px !important
+        padding: 0 !important
+        display: flex !important
+        align-items: center
+        background-position: right 5px center !important
+        height: 43px !important
+        @media only screen and (min-width: 468px)
+            background-size: 10px
+            background-position: right 9px center !important
+        @media only screen and (min-width: 468px)
+            height: 46px !important
+        @media only screen and (min-width: 992px)
+            height: 48px !important
+        .select2-selection__rendered
+            color: rgb(25, 25, 25)
+            width: 100%
+            padding: 0px 15px
+            font-weight: 400
+            font-size: 13px
+            padding: 5px 15px !important
+            @media only screen and (min-width: 576px)
+                font-size: 14px
+
+.select2-container
+    z-index: 1052
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option.select2-results__option--selected, .select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option[aria-selected="true"]
+    background: $basecolor !important
+    color: $white
+.select2-dropdown
+    min-width: 100px
+    border: 1px solid rgba(210, 210, 210, 0.45) !important
+    border-radius: 0 !important
+    @media only screen and (max-width: 768px)
+        left: -55px !important
+.select2-results__option:not(:last-of-type)
+    border-bottom: 1px solid rgba(183, 162, 109, 0.45) !important
+
+// PARALLAX
+.parallax
+    background-repeat: no-repeat !important
+    background-size: cover !important
+    background-attachment: fixed !important
+    width: 100%
+    height: 120%
+    background-position: 50% 0
+
+// JARALLAX
+.jarallax
+    position: relative
+    z-index: 0
+    .jarallax-img
+        position: absolute
+        object-fit: cover
+        left: 0
+        top: 0
+        z-index: 0
+        width: 100%
+        height: 100%
+        user-select: none
+        pointer-events: none
+    .container
+        position: relative
+        z-index: 1
+
+// NAVIGATION            
+.SliderWrp
+    position: relative
+    .Navigation
+        display: none
+        @media only screen and (min-width: 1200px)
+            display: block
+        .arrows
+            cursor: pointer
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 2
+            opacity: 1
+            width: fit-content
+            width: -moz-fit-content
+            height: fit-content
+            height: -moz-fit-content
+            user-select: none
+            svg
+                // stroke: rgb(246, 150, 122)
+                stroke: $basecolor
+                stroke-width: 1px
+                fill-rule: evenodd
+                stroke-linecap: butt
+                stroke-linejoin: miter
+                fill: none
+                width: 12px
+                height: 40px
+                @media only screen and (min-width: 992px)
+                    width: 18px
+                    height: 68px
+            &.OwlPrev
+                left: 0px
+                @media only screen and (min-width: 1200px)
+                    left: -35px
+            &.OwlNext
+                right: 0px
+                @media only screen and (min-width: 1200px)
+                    right: -35px
+
+// JARALLAX
+.jarallax
+    position: relative
+    z-index: 0
+    .jarallax-img
+        position: absolute
+        object-fit: cover
+        left: 0
+        top: 0
+        z-index: 0
+        width: 100%
+        height: 100%
+        user-select: none
+        pointer-events: none
+    .container
+        position: relative
+        z-index: 1
+
+// QUANTITY INCREMENT
+.IncrementCounter
+    display: flex
+    align-items: center
+    border: 1px solid rgb(230, 212, 207)
+    width: fit-content
+    width: -moz-fit-content
+    height: 44px
+    padding: 0 12px
+    .label
+        color: rgb(54, 54, 54)
+        font-size: 14px
+    .Counter
+        display: flex
+        align-items: center
+        padding-left: 15px
+        @media only screen and (min-width: 468px)
+            padding-left: 20px
+        .btn
+            border-radius: 0
+            background: none
+            color: rgb(0, 0, 0)
+            font-weight: 600
+            border: none
+            box-shadow: none
+            outline: none
+            padding: 0
+            margin: 0
+            cursor: pointer
+            min-width: auto
+            width: 15px
+            height: 15px
+            font-size: 14px
+            @include center
+        .form-control
+            width: fit-content
+            width: -moz-fit-content
+            min-width: 35px
+            width: 35px
+            padding: 0 5px
+            height: 24px
+            border: none
+            box-shadow: none
+            text-align: center
+            outline: none
+            color: rgb(0, 0, 0)
+            font-size: 14px

@@ -1,0 +1,260 @@
+// NO RESULT
+.NoResult
+    text-align: center
+    padding: 25px 0 30px
+    svg
+        display: block
+        margin: auto
+        max-width: 210px
+        @media only screen and (min-width: 768px)
+            max-width: 375px
+        &:not(.animated)
+            .animable
+                opacity: 0
+
+        &.animated
+            #freepik--Character--inject-1
+                animation: 1.5s Infinite linear floating
+                animation-delay: 0s
+
+        @keyframes floating
+            0%
+                opacity: 1
+                transform: translateY(0px)
+
+            50%
+                transform: translateY(-10px)
+
+            100%
+                opacity: 1
+                transform: translateY(0px)
+
+    .MainTxt
+        font-weight: 500
+        font-size: 18px
+        margin-bottom: 12px
+        @media only screen and (min-width: 768px)
+            font-size: 28px
+            margin-bottom: 25px
+
+    .SubTxt
+        font-size: 14px
+        @media only screen and (min-width: 768px)
+            font-size: 17px
+
+// EMPTY CART
+.ErrorSec
+    text-align: center
+    padding: 45px 0
+    @media only screen and ( min-width: 468px )
+        padding: 80px 0
+    .IconWrapper
+        max-width: 300px
+        margin: auto
+        margin-bottom: 15px
+    .Head
+        font-family: $fontstack2
+        text-transform: uppercase
+        color: $basecolor
+    .btn
+        max-width: 285px
+
+#EmptyCartSvg
+    max-width: 215px
+    @media only screen and ( min-width: 468px )
+        max-width: 300px
+    .EMst0
+        fill: #EBEBEB
+
+    .EMst1
+        fill: #E0E0E0
+
+    .EMst2
+        fill: #FAFAFA
+
+    .EMst3
+        fill: #F5F5F5
+
+    .EMst4
+        display: none
+
+    .EMst5
+        display: inline
+        fill: #EBEBEB
+
+    .EMst6
+        fill: #263238
+
+    .EMst7
+        fill: #FFBE9D
+
+    .EMst8
+        fill: #EB996E
+
+    .EMst9
+        fill: #455A64
+
+    .EMEMst10
+        fill: $basecolor
+
+    .EMEMst11
+        opacity: 0.6
+
+    .EMEMst12
+        fill: #FFFFFF
+
+    .EMEMst13
+        opacity: 0.3
+
+    .EMEMst14
+        fill: #c5c5c5
+
+    .EMEMst15
+        opacity: 0.5
+
+    .EMEMst16
+        opacity: 0.4
+
+// ORDER SUCESS
+.OrderPlaced
+    #OrderPlacedMsg
+        background-color: $white
+        padding: 40px 0 45px
+        @media only screen and (min-width: 468px)
+            padding: 50px 0 70px
+        @media only screen and (min-width: 992px)
+            padding: 65px 0 80px
+        @media only screen and (min-width: 1441px)
+            padding: 90px 0 100px
+        .row
+            justify-content: center
+        .box
+            border: 1px solid rgb(226, 229, 239)
+            border-radius: 5px
+            background-color: rgba(229, 128, 99, 0.11)
+            position: relative
+            width: 90%
+            max-width: 430px
+            text-align: center
+            padding: 45px 40px 45px
+            @media only screen and (min-width: 468px)
+                padding: 75px 50px 55px
+            @media only screen and (min-width: 1441px)
+                max-width: 453px
+                padding: 80px 55px 70px
+            .BG
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translate(-50%, 0)
+                width: 350px
+                fill: rgb(104, 125, 159)
+                opacity: .05
+                pointer-events: none
+            .icon
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 100%
+                margin-bottom: 20px
+                @media only screen and (min-width: 468px)
+                    margin-bottom: 25px
+                @media only screen and (min-width: 1441px)
+                    margin-bottom: 40px
+                svg
+                    width: 45px
+                    fill: rgb(50, 169, 49)
+                    @media only screen and (min-width: 468px)
+                        width: 55px
+                    @media only screen and (min-width: 1441px)
+                        width: 70px
+            .head
+                color: $basecolor
+                font-weight: 600
+                font-family: $fontstack2
+                text-transform: uppercase
+                font-size: 20px
+                margin-bottom: 15px
+                text-align: center
+                @media only screen and (min-width: 468px)
+                    font-size: 25px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 1441px)
+                    font-size: 30px
+                    margin-bottom: 25px
+            .Subhead
+                color: #000
+                font-size: 15px
+                margin-bottom: 15px
+                text-align: center
+                @media only screen and (min-width: 468px)
+                    font-size: 18px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 1441px)
+                    margin-bottom: 25px
+
+            ul
+                margin: 0
+                padding: 0
+                list-style: none
+                margin: 0px
+                li
+                    font-size: 13px
+                    color: rgb(44, 44, 44)
+                    line-height: normal
+                    position: relative
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @media only screen and (min-width: 1441px)
+                        font-size: 15px
+                    span
+                        color: inherit
+                        min-width: 145px
+                        font-weight: 600
+                        display: inline-block
+                        position: relative
+                        padding-right: 13px
+                        &::after
+                            content: ":"
+                            position: absolute
+                            right: 5px
+                            top: 0
+                    &:not(:last-of-type)
+                        margin-bottom: 10px
+                        @media only screen and (min-width: 468px)
+                            margin-bottom: 13px
+                        @media only screen and (min-width: 1441px)
+                            margin-bottom: 18px
+            // BUTTON STYLE
+            .combtn
+                border-radius: 3px
+                background: $basecolor
+                width: 100%
+                height: 40px
+                border: none
+                outline: none !important
+                box-shadow: none !important
+                transition: all .3s
+                font-size: 13px
+                color: rgb(255, 255, 255)
+                font-weight: 400
+                text-transform: uppercase
+                display: flex
+                align-items: center
+                justify-content: center
+                text-decoration: none !important
+                @media only screen and (min-width: 468px)
+                    font-size: 15px
+                    height: 45px
+                &:hover, &:focus
+                    color: $white
+                    background: $basecolor2
+            .btn
+                margin: auto
+                margin-top: 35px
+                @media only screen and (min-width: 992px)
+                    margin-top: 35px
+                    width: 100%
+                @media only screen and (min-width: 1441px)
+                    margin-top: 50px

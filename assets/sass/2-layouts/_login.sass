@@ -1,0 +1,147 @@
+//LOGIN_PAGE
+/************** ******** **************/
+/************* LOGIN_PAGE *************/
+/************** ******** **************/
+.RegisterPage
+    background: rgb(255, 245, 237) url('../images/BGPatern.webp') repeat
+    .layoutContainer
+        padding: 45px 15px 50px
+        @media only screen and (min-width: 768px)
+            padding: 85px 15px 90px
+        @media only screen and (min-width: 1551px)
+            padding: 100px 15px 125px
+    .FormContainer
+        max-width: 880px
+        margin: auto
+        border-radius: 10px
+        overflow: hidden
+    .FlexBox
+        position: relative
+        @include display
+    .ImgWrp
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 100%
+        @media only screen and (min-width: 768px)
+            width: 50%
+            height: auto
+            position: unset
+        @media only screen and (min-width: 992px)
+            width: 425px
+        img
+            @include imgFit
+    .FormWraper
+        background: rgba(255, 255, 255, 0.85)
+        width: 100%
+        position: relative
+        z-index: 1
+        padding: 25px 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        @media only screen and (min-width: 468px)
+            padding: 45px 40px 35px
+        @media only screen and (min-width: 768px)
+            background: $white
+            width: 50%
+        @media only screen and (min-width: 992px)
+            width: calc(100% - 425px)
+            padding: 90px 70px 50px 60px
+        .FormHead
+            color: $basecolor
+            text-transform: uppercase
+            font-family: $fontstack2
+            font-size: 20px
+            margin-bottom: 15px
+            @media only screen and (min-width: 468px)
+                font-size: 24px
+            @media only screen and (min-width: 1551px)
+                font-size: 26px
+                margin-bottom: 18px
+        .form-group
+            margin-bottom: 12px
+        .flex
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            margin-bottom: 15px
+            @media only screen and (min-width: 468px)
+                margin-bottom: 25px
+            .cheeck_box
+                display: flex
+                align-items: center
+                padding-right: 10px
+                cursor: pointer
+                .form-group
+                    margin: 0
+                .label
+                    font-size: 13px
+                    color: rgb(80, 80, 80)
+                    user-select: none
+                    -webkit-user-drag: none
+                    width: calc(100% - 23px)
+                    line-height: 17px
+                label
+                    display: flex
+                    align-items: center
+                input[type="checkbox"]
+                    min-width: 23px
+                    width: 23px
+                    height: 23px
+                    position: relative
+                    margin-right: 15px
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 0px
+                        top: 0px
+                        border: 1px solid rgb(225, 225, 225)
+                        background-color: white
+                        width: 23px
+                        height: 23px
+
+                    &::after
+                        content: ""
+                        background: url('../images/checkmark.svg') no-repeat center
+                        background-size: 13px
+                        width: 13px
+                        height: 10px
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        color: $basecolor
+                        opacity: 0
+                        visibility: hidden
+                        transition: ease-in-out all 0.3s
+                        transform: translate(-50%, -50%)
+                    &:checked
+                        &::after
+                            opacity: 1
+                            visibility: visible
+            .forgot
+                font-size: 12px
+                color: $basecolor
+                text-decoration: none
+                @media only screen and (min-width: 468px)
+                    font-size: 14px
+        .btn
+            width: 100%
+            max-width: 100%
+            border-radius: 5px
+            margin-top: 0
+            text-transform: uppercase
+        .pushBtn
+            font-size: 13px
+            text-align: center
+            margin-top: 15px
+            color: $black
+            @media only screen and (min-width: 468px)
+                font-size: 14px
+            @media only screen and (min-width: 768px)
+                margin-top: 20px
+                color: rgb(123, 123, 123)
+            a
+                display: inline
+                color: $basecolor

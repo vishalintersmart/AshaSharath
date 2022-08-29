@@ -1,0 +1,343 @@
+// BASE STYLES
+*
+  margin: 0
+  padding: 0
+  border: none
+  outline: none
+  list-style: none
+  box-sizing: border-box
+  border-collapse: inherit
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  -webkit-tap-highlight-color: transparent
+  -webkit-text-rendering: optimizeSpeed
+  text-rendering: optimizeSpeed
+
+html, body
+  font-family: $fontstack1
+  line-height: normal
+  font-weight: 400
+
+h1, h2, h3, h4, h5, h6
+  color: $basecolor
+
+h1
+  line-height: normal
+  font-size: 32px
+  margin: 0
+  @media only screen and (min-width: 468px)
+    font-size: 36px
+  @media only screen and (min-width: 768px)
+    font-size: 40px
+  @media only screen and (min-width: 1441px)
+    font-size: 48px
+
+h2
+  margin-bottom: 10px
+  font-size: 20px
+  @media only screen and (min-width: 468px)
+    font-size: 24px
+  @media only screen and (min-width: 768px)
+    font-size: 28px
+    margin-bottom: 15px
+  @media only screen and (min-width: 1550px)
+    font-size: 30px
+    margin-bottom: 20px
+h3, h4, h5
+  font-size: 18px
+  margin-bottom: 10px
+  @media only screen and (min-width: 768px)
+    font-size: 24px
+    margin-bottom: 15px
+  @media only screen and (min-width: 1550px)
+    font-size: 28px
+    margin-bottom: 25px
+
+h6
+  font-size: 18px
+  margin-bottom: 10px
+  @media only screen and (min-width: 768px)
+    font-size: 19px
+    margin-bottom: 15px
+  @media only screen and (min-width: 1550px)
+    font-size: 24px
+    margin-bottom: 18px
+
+p
+  color: $text
+  margin-bottom: 15px
+  font-size: 14px
+  font-weight: 400
+  line-height: 22px
+  @media only screen and (min-width: 768px)
+    font-size: 15px
+    margin-bottom: 25px
+  strong
+    font-weight: 600
+
+  a
+    color: $basecolor
+    display: inline
+    text-decoration: underline
+    text-underline-position: under
+    &:hover
+      color: $basecolor
+
+a
+  text-decoration: none
+  transition: all .3s
+  &:hover
+    color: inherit
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+img
+  vertical-align: middle
+  border: 0
+  -ms-interpolation-mode: bicubic
+  max-width: 100%
+
+form
+  .row
+    margin: -7.5px -12.5px
+    >*
+      padding: 7.5px 12.5px
+  .BtnFlx
+    margin: -15px
+    padding-top: 10px
+    @include display
+    >*
+      padding: 15px
+      width: 50%
+      @media only screen and (min-width: 1551px)
+  button[type="submit"]
+    margin-top: 20px
+    @media only screen and (min-width: 576px)
+      margin-top: 30px
+
+.form-group
+  position: relative
+  margin-bottom: 0px
+  label
+    color: rgb(0, 0, 0)
+    margin-bottom: 10px
+    font-size: 12px
+    @media only screen and (min-width: 468px)
+      font-size: 14px
+  .PassWrp
+    position: relative
+  .showPass
+    position: absolute
+    right: 22px
+    top: 28px
+    margin: auto
+    z-index: 1
+    cursor: pointer
+    user-select: none
+    -webkit-user-select: none
+    transition: all .3s
+    opacity: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    pointer-events: none
+    height: 40px
+    @media only screen and (min-width: 1551px)
+      height: 44px
+    svg
+      width: 19px
+      height: 19px
+      fill: #a0a8bc
+      transition: all .3s
+    &.hidden
+      svg
+        &#show
+          display: none
+    &.show
+      svg
+        &#hide
+          display: none
+    &:hover
+      svg
+        fill: $basecolor
+.form-control, [type="file"]
+  border-radius: 5px
+  border: 1px solid rgb(200, 202, 215)
+  height: 40px
+  background-color: transparent
+  background-clip: padding-box
+  outline: none
+  box-shadow: none !important
+  display: block
+  width: 100%
+  background: transparent
+  transition: all .3s
+  font-size: 12px
+  padding: 5px 10px
+  color: rgb(107, 107, 108)
+  @media only screen and (min-width: 992px)
+    padding: 10px 20px
+    font-size: 14px
+  @media only screen and (min-width: 1551px)
+    height: 44px
+  &::placeholder
+    color: #000
+    text-transform: none
+  &:focus
+    background: none
+    border-color: $basecolor
+  &:focus~label, &:not(:placeholder-shown)~label
+    transform: translateY(-32px)
+  &:not(:focus):placeholder-shown~label
+    opacity: 0
+  &:valid ~ .showPass
+    opacity: 1
+    pointer-events: all
+  &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, :-webkit-autofill:active
+    -webkit-text-fill-color: rgb(0, 0, 0)
+    -webkit-box-shadow: 0 0 0px 30px $white inset
+    transition: background-color 5000s ease-in-out 0s
+  &:-internal-autofill-selected
+    background-color: -internal-light-dark(rgb(2, 142, 212), rgba(70, 90, 126, 0.4)) !important
+    -webkit-box-shadow: 0 0 0px 30px rgb(2, 142, 212) inset
+  &::-ms-expand
+    background-color: transparent
+    border: 0
+  @media (prefers-reduced-motion: reduce)
+    transition: none
+
+  &[type=file]
+    padding: 11px 15px
+    font-size: 11px
+    @media only screen and (min-width: 468px)
+      padding: 10px 16px
+      font-size: 12px
+    @media only screen and (min-width: 1551px)
+      padding: 15px 20px
+
+textarea.form-control
+  min-height: 105px
+  padding-top: 15px
+input[type="date"].form-control,
+input[type="datetime-local"].form-control,
+input[type="month"].form-control,
+input[type="time"].form-control
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+input[type="date"]
+  position: relative
+input[type="date"]::-webkit-calendar-picker-indicator
+  color: rgba(0, 0, 0, 0)
+  opacity: 1
+  display: block
+  background: url('../images/calendar.svg') no-repeat
+  width: 18px
+  height: 18px
+  border-width: thin
+  position: absolute
+  right: 22px
+button[type="submit"], .btn
+  cursor: pointer
+  margin: 0
+  outline: none
+  box-shadow: none
+  border-radius: 0px
+  color: $white
+  transition: all .3s
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid $basecolor
+  background-color: $basecolor
+  font-size: 12px
+  letter-spacing: 1px
+  width: fit-content
+  width: -moz-fit-content
+  margin: auto
+  padding: 9px 10px
+  min-width: 120px
+  height: 40px
+  @media only screen and (min-width: 468px)
+    min-width: 140px
+  @media only screen and (min-width: 992px)
+    padding: 9px 20px
+  @media only screen and (min-width: 1551px)
+    height: 43px
+    font-size: 14px
+  &:hover
+    border-color: $basecolor
+    background-color: $basecolor
+
+::selection
+  color: #fff
+  background: $basecolor
+::-moz-selection
+  color: #fff
+  background: $basecolor
+::-webkit-scrollbar
+  width: 5px
+::-webkit-scrollbar-thumb
+  background: $basecolor
+  border-radius: 30px
+::-webkit-scrollbar-track
+  box-shadow: inset 0 0 0 grey
+  border-radius: 0px
+  background: rgb(168, 180, 198)
+
+svg
+  display: inline-block
+  position: relative
+  width: 100%
+  vertical-align: middle
+  overflow: hidden
+  transition: all .3s
+  *
+    transition: all .3s
+
+.btn-check:focus+.btn, .btn:focus
+  outline: 0
+  box-shadow: none
+
+.row
+  margin: -7px
+  @media only screen and (min-width: 768px)
+    margin: -15px
+  >*
+    padding: 7px
+    @media only screen and (min-width: 768px)
+      padding: 15px
+
+table
+  width: 100%
+  thead
+    border: 1px solid rgb(235, 235, 235)
+    background-color: rgb(243, 243, 243)
+    th
+      color: rgb(26, 26, 26)
+      font-weight: 600
+      border: 1px solid rgb(235, 235, 235)
+      font-size: 13px
+      padding: 10px 15px
+      @media only screen and (min-width: 468px)
+        padding: 15px 25px
+        font-size: 14px
+      @media only screen and (min-width: 1200px)
+        padding: 15px 45px
+        font-size: 16px
+  tbody
+    td
+      color: rgb(26, 26, 26)
+      line-height: 20px
+      padding: 10px 15px
+      border: 1px solid rgb(235, 235, 235)
+      font-size: 13px
+      @media only screen and (min-width: 468px)
+        padding: 15px 25px
+        font-size: 14px
+      @media only screen and (min-width: 1200px)
+        padding: 15px 45px
+        font-size: 16px

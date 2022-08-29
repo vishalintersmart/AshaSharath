@@ -1,0 +1,823 @@
+//PRODUCTS PAGE
+/************** *********** **************/
+/************* PRODUCTS PAGE *************/
+/************** *********** **************/
+.MainProPage
+    #ProList
+        padding: 10px 0 40px
+        @media only screen and (min-width: 468px)
+            padding: 10px 0 70px
+        @media only screen and (min-width: 992px)
+            padding: 30px 0 95px
+        @media only screen and (min-width: 1200px)
+            padding: 50px 0 125px
+        .FlxRow
+            @include display
+            margin: -2.5px
+            @media only screen and (min-width: 576px)
+                margin: -5px
+            @media only screen and (min-width: 768px)
+                margin: -7.5px
+            @media only screen and (min-width: 1200px)
+                margin: -15px
+            >*
+                width: calc(100% / 2)
+                padding: 2.5px
+                @media only screen and (min-width: 576px)
+                    padding: 5px
+                @media only screen and (min-width: 768px)
+                    width: calc(100% / 3)
+                    padding: 7.5px
+                @media only screen and (min-width: 1200px)
+                    padding: 15px
+.ProPage
+    #ProList
+        padding-bottom: 40px
+        @media only screen and (min-width: 468px)
+            padding-bottom: 70px
+        @media only screen and (min-width: 992px)
+            padding-bottom: 95px
+        @media only screen and (min-width: 1200px)
+            padding-bottom: 125px
+        .FlxRow
+            @include display
+            margin: -2.5px
+            @media only screen and (min-width: 576px)
+                margin: -5px
+            @media only screen and (min-width: 768px)
+                margin: -7.5px
+            @media only screen and (min-width: 1200px)
+                margin: -15px
+            >*
+                width: calc(100% / 2)
+                padding: 2.5px
+                @media only screen and (min-width: 576px)
+                    padding: 5px
+                @media only screen and (min-width: 768px)
+                    width: calc(100% / 3)
+                    padding: 7.5px
+                @media only screen and (min-width: 1200px)
+                    width: calc(100% / 4)
+                    padding: 15px
+            .ProBox
+                margin-bottom: 20px
+
+    .PageTitleWrp
+        font-family: $fontstack2
+        color: rgb(37, 37, 37)
+        text-transform: uppercase
+        justify-content: center
+        display: none
+        align-items: center
+        font-size: 16px
+        @media only screen and (min-width: 768px)
+            display: flex
+            width: calc(100% - 220px)
+        @media only screen and (min-width: 992px)
+            font-size: 18px
+            width: calc(100% - 630px)
+        span
+            margin: 0 10px
+        .itmsCount
+            color: rgb(118, 117, 117)
+        &.Mob
+            display: flex
+            margin: 10px 0 15px
+            @media only screen and (min-width: 768px)
+                display: none
+    .FilterHeaderTab
+        background: $white
+        width: 100%
+        padding: 10px 0
+        border-top: 1px solid rgb(239, 239, 239)
+        border-bottom: 1px solid rgb(239, 239, 239)
+        bottom: 0
+        z-index: 3
+        position: fixed
+        transition: all .5s
+        &.Released
+            transform: translateY(100%)
+            @media only screen and (min-width: 768px)
+                transform: none
+        &.Fixed
+            -webkit-transform: translateY(0)
+            transform: translateY(0)
+        @media only screen and (min-width: 768px)
+            display: block
+            margin: 15px 0 20px
+            position: unset
+            width: 100%
+            border: none
+            background: none
+            margin: 15px 0 35px
+
+        .container
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .FilterBtn
+            font-family: $fontstack2
+            font-size: 14px
+            letter-spacing: 1px
+            color: rgb(37, 37, 37)
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            background: none
+            outline: none
+            box-shadow: none
+            width: 50%
+            border-right: 1px solid #efefef
+            justify-content: center
+            @media only screen and (min-width: 768px)
+                font-size: 16px
+                justify-content: flex-start
+                border: none
+                width: 110px
+            @media only screen and (min-width: 992px)
+                font-size: 18px
+                width: 265px
+            svg
+                fill: rgb(246, 150, 123)
+                stroke: rgb(246, 150, 123)
+                stroke-linecap: round
+                stroke-miterlimit: 10
+                width: 22px
+                margin-right: 15px
+                @media only screen and (min-width: 768px)
+                    width: 25px
+                    margin-right: 25px
+        .DesksortOption
+            font-size: 14px
+            color: rgb(246, 150, 123)
+            text-transform: uppercase
+            align-items: center
+            width: 265px
+            display: none
+            @media only screen and (min-width: 992px)
+                display: flex
+            .Label
+                display: block
+                width: 78px
+            .select2
+                min-width: 157px
+                background: none
+                border: none
+                outline: none
+            .select2-selection
+                background: url(../images/SelectArrow.svg) no-repeat right top
+                background-size: 6px
+                border: none
+                outline: none
+            .select2-selection__rendered
+                font-size: 14px
+                color: #252525
+        .sortOption
+            font-family: $fontstack2
+            letter-spacing: 1px
+            color: rgb(37, 37, 37)
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            background: none
+            outline: none
+            box-shadow: none
+            font-size: 14px
+            width: 50%
+            justify-content: center
+            @media only screen and (min-width: 768px)
+                font-size: 16px
+                justify-content: flex-start
+                width: 110px
+            @media only screen and (min-width: 992px)
+                font-size: 18px
+                display: none
+            svg
+                fill: rgb(246, 150, 123)
+                stroke: rgb(246, 150, 123)
+                stroke-linecap: round
+                stroke-miterlimit: 10
+                width: 18px
+                margin-right: 15px
+                @media only screen and (min-width: 768px)
+                    margin-right: 25px
+                @media only screen and (min-width: 992px)
+                    width: 25px
+
+// FILTER MODAL
+#FilterModal
+    z-index: 9999
+    font-family: $fontstack2
+    .modal-dialog
+        margin: 0
+        max-width: 100%
+        @media only screen and (min-width: 468px)
+            max-width: 335px
+    .modal-content
+        border: none
+        border-radius: 0
+        min-height: 100vh
+        padding: 20px 15px
+        @media only screen and (min-width: 468px)
+            padding: 30px 25px
+    .ModalHeader
+        border-bottom: 1px solid rgb(253, 223, 215)
+        margin-bottom: 10px
+        padding-bottom: 20px
+        @include display
+        @media only screen and (min-width: 468px)
+            padding-bottom: 35px
+        .title
+            font-family: $fontstack2
+            font-size: 24px
+            color: rgb(229, 128, 100)
+            text-transform: uppercase
+            width: calc(100% - 13px)
+        .close
+            background: none
+            border: none
+            outline: none
+            box-shadow: none
+            width: 13px
+    .modal-body
+        padding: 0px
+    #filterAccodion
+        .card
+            border: none
+            background: none
+            .cardHeader
+                padding: 10px 0px
+                margin: 0px
+                border-top: 1px solid rgb(253, 223, 215)
+                button
+                    padding: 0px
+                    margin: 0px
+                    letter-spacing: 1px
+                    color: #000
+                    text-transform: uppercase
+                    outline: none
+                    border: none
+                    box-shadow: none
+                    text-decoration: none
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    text-align: left
+                    position: relative
+                    height: 30px
+                    background: transparent
+                    font-weight: 300
+                    &.MainBtn
+                        font-size: 16px
+                        #AccordIcon
+                            width: 12px
+                            fill: $basecolor
+                    &[aria-expanded="true"]
+                        #AccordIcon
+                            .Vertical
+                                opacity: 0
+
+                    &.SubBtn
+                        letter-spacing: 0
+                        color: rgb(45, 45, 45)
+                        font-size: 14px
+                        #AccordIconSub
+                            width: 6px
+                            fill: $basecolor
+            &:first-of-type
+                .cardHeader
+                    border: none
+            .card-body
+                padding: 0
+                margin-top: 0px
+                padding-bottom: 25px
+                @media only screen and (min-width: 468px)
+                    padding-bottom: 35px
+
+                .card-body
+                    padding: 0 15px
+                ul
+                    font-size: 14px
+                    li
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        &:not(:last-of-type)
+                            margin-bottom: 5px
+                    label
+                        position: relative
+                        cursor: pointer
+                        white-space: nowrap
+                        user-select: none
+                        -ms-user-select: none
+                        -moz-user-select: none
+                        -webkit-user-select: none
+                        font-size: 15px
+                        color: rgb(109, 109, 109)
+                        width: 100%
+                        input
+                            visibility: hidden
+                            position: absolute
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            top: 0
+                            &:checked~span
+                                color: $basecolor
+
+            #ColorFilter
+                .card-body
+                    padding-left: 4px
+                    ul
+                        li
+                            overflow: visible
+                            &:not(:last-of-type)
+                                margin-bottom: 15px
+                        label
+                            position: relative
+                            input
+                                position: unset
+                                left: 0
+                                width: 15px
+                                height: 15px
+                                margin-right: 15px
+                                visibility: hidden
+                            .checkboxIndicator
+                                -webkit-box-sizing: border-box
+                                box-sizing: border-box
+                                position: absolute
+                                border-radius: 50%
+                                top: 0px
+                                width: 15px
+                                height: 15px
+                                border: 1px solid #c3c2c9
+                                background: #fff
+                                border-radius: 50%
+                                top: 2px
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    inset: 0px
+                                    border-radius: 50%
+                                    transition: all 125ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+                                    border: 1px solid transparent
+                                &::after
+                                    display: none
+                            span
+                                transition: all 125ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+                            input
+                                &:checked~.checkboxIndicator
+                                    &::before
+                                        border-color: $basecolor
+                                        transition-duration: 250ms
+                                        inset: -4px
+                                &:checked + span
+                                    color: $basecolor
+            #priceFilter
+                .irs
+                    margin-top: 30px
+                .irs-bar
+                    background-color: $basecolor
+                .irs--flat
+                    height: 20px
+                    margin: 0 20px
+                    .irs-bar
+                        top: 0
+                        height: 8px
+                        border-top: 1px solid $basecolor
+                        border-bottom: 1px solid $basecolor
+                    .irs-line
+                        top: 0
+                        height: 8px
+                        border-radius: 30px
+                        background-color: rgb(255, 255, 255)
+                        box-shadow: rgba(0, 0, 0, 0.36) 0.5px 0.5px 3px 1px inset
+
+                    .irs-handle
+                        border-radius: 50%
+                        background-color: #ffffff
+                        width: 16px
+                        height: 16px
+                        border: none
+                        top: -4px
+                        box-shadow: 0 0 2px 1px #3498db
+                        i
+                            display: none
+                .irs-single
+                    display: none
+                .irs-from, .irs-to
+                    position: absolute
+                    width: fit-content
+                    width: -moz-fit-content
+                    visibility: visible !important
+                    top: -33px
+                    padding: 0
+                    display: block
+                    white-space: nowrap
+                    padding: 2px 5px
+                    min-width: 20px
+                    text-align: center
+                    color: #1e1d1d
+                    border-radius: 5px
+                    background: #fff
+                    border: 1px solid #fddfd7
+                    font-size: 10px
+                    font-family: $fontstack2
+                    @media only screen and (min-width: 468px)
+                        font-size: 12px
+
+                    &::after
+                        content: ""
+                        position: absolute
+                        bottom: -10px
+                        left: 50%
+                        width: 0
+                        height: 0
+                        border: 5px solid transparent
+                        border: 6px solid transparent\0
+                        border-top-color: inherit
+                        transform: translate(-50%)
+                    &::before
+                        content: "AED"
+                        display: inline
+                        font-weight: 500
+                        color: #000
+                        position: unset
+                        border: none
+                        width: auto
+                        height: auto
+                        margin: 0px
+                        margin-right: 5px
+                        font-size: 10px
+                        @media only screen and (min-width: 468px)
+                            font-size: 12px
+                    // &::after
+                    //     display: none
+                    &.irs-from
+                        // left: 0 !important
+                    &.irs-to
+                        margin: 0 0 0 auto
+                        // right: 0
+                .irs-min, .irs-max
+                    display: none
+
+/*********************** SORT_POP ***********************/
+#sortPop
+    .modal-body
+        #Categories
+            .label
+                padding: 10px 0
+                color: rgb(48, 48, 48)
+                position: relative
+                font-size: 13px
+                @media only screen and (min-width: 992px)
+                    font-size: 15px
+                input[type="checkbox"], input[type="radio"]
+                    opacity: 0
+                    position: absolute
+                    left: 0px
+                    top: 0px
+                    width: 100%
+                    height: 100%
+                    &:checked + label
+                        font-weight: 600
+                        color: $basecolor
+
+/*********************** PRODUCT DETAILS ***********************/
+.ProDtlPage
+    &#pageWrapper
+        overflow: visible
+    #BreadCrumb
+        @media only screen and (min-width: 468px)
+            padding: 25px 0
+    #productDtlSec
+        padding-bottom: 45px
+        @media only screen and (min-width: 468px)
+            padding-bottom: 55px
+        @media only screen and (min-width: 576px)
+            padding-bottom: 75px
+        @media only screen and (min-width: 992px)
+            padding-bottom: 110px
+        .scrollfix
+            @media only screen and (min-width: 992px)
+                position: -webkit-sticky
+                position: sticky
+                top: 75px
+                height: 100%
+        .MainRow
+            @include display
+        .proSlideSecCol
+            width: 100%
+            @media only screen and (min-width: 992px)
+                width: 445px
+            @media only screen and (min-width: 1200px)
+                width: 670px
+            @media only screen and (min-width: 1551px)
+                width: 700px
+            .proSlideSec
+                padding-bottom: 20px
+                @include display
+                @media only screen and (min-width: 468px)
+                    padding-bottom: 30px
+                @media only screen and (min-width: 992px)
+                    padding-bottom: 0px
+                    padding-right: 15px
+                @media only screen and (min-width: 1200px)
+                    padding-right: 30px
+                #mainSlide
+                    width: 100%
+                    @media only screen and (min-width: 468px)
+                        padding-bottom: 20px
+                    @media only screen and (min-width: 1200px)
+                        order: 1
+                        padding-bottom: 0px
+                        padding-left: 20px
+                        width: calc(100% - 115px)
+                    a
+                        height: 100%
+                        display: block
+                    .splide__slide
+                        @media only screen and (max-width: 1200px)
+                            height: 100% !important
+                    .splide__pagination
+                        bottom: 22px
+                        margin: 0 -8px
+                        @media only screen and (min-width: 1200px)
+                            margin: 0 -11px
+                        li
+                            padding: 0 8px
+                            @media only screen and (min-width: 1200px)
+                                padding: 0 11px
+                            button
+                                border-radius: 50%
+                                background-color: rgb(255, 255, 255)
+                                margin: 0
+                                opacity: 1
+                                width: 10px
+                                height: 10px
+                                @media only screen and (min-width: 1551px)
+                                    width: 20px
+                                    height: 20px
+                                &.is-active
+                                    transform: none
+                                    background-color: rgb(54, 54, 54)
+                                    opacity: 0.502
+                #thumbSlide
+                    display: none
+                    width: 100%
+                    @media only screen and (min-width: 468px)
+                        display: block
+                    @media only screen and (max-width: 992px)
+                        max-width: 100% !important
+                    @media only screen and (min-width: 1200px)
+                        order: 0
+                        width: 115px
+                    a
+                        height: 100%
+                        display: block
+                    img
+                        @include imgFit
+                    .splide__list
+                        justify-content: center
+                        @media only screen and (min-width: 992px)
+                            justify-content: flex-start
+                        .splide__slide
+                            border: none
+                            &:focus
+                                outline: none
+                                outline-offset: 0
+                            &.is-active
+                                border: none
+        .ProInfoSec
+            width: 100%
+            background: #fff
+            padding: 30px 25px 45px
+            @media only screen and (min-width: 576px)
+                padding: 35px 35px 45px 35px
+            @media only screen and (min-width: 992px)
+                width: calc(100% - 445px)
+                padding: 35px 35px 45px 35px
+            @media only screen and (min-width: 1200px)
+                padding: 35px 35px 45px 45px
+                width: calc(100% - 670px)
+            @media only screen and (min-width: 1551px)
+                width: calc(100% - 700px)
+
+            .ProMainInfo
+                margin-bottom: 20px
+                @media only screen and (min-width: 468px)
+                    margin-bottom: 25px
+                .Collection
+                    color: rgb(130, 129, 129)
+                    letter-spacing: 1px
+                    margin-bottom: 12px
+                    font-size: 11px
+                    @media only screen and (min-width: 468px)
+                        margin-bottom: 15px
+                        font-size: 15px
+                .ProName
+                    color: rgb(0, 0, 0)
+                    margin-bottom: 5px
+                    font-size: 19px
+                    @media only screen and (min-width: 468px)
+                        font-size: 24px
+                .ProCode
+                    letter-spacing: 1px
+                    color: rgb(130, 129, 129)
+                    font-size: 13px
+                    @media only screen and (min-width: 468px)
+                        font-size: 14px
+
+            .PriceWrp
+                font-size: 16px
+                @media only screen and (min-width: 468px)
+                    font-size: 18px
+                .CPrice
+                    color: #161616
+                .APrice
+                    text-decoration: line-through
+                    color: #747373
+                    margin-left: 10px
+                    @media only screen and (min-width: 468px)
+                        margin-left: 15px
+                .OffTag
+                    background: rgb(229, 128, 99)
+                    padding: 5px 6px
+                    color: rgb(255, 255, 255)
+                    font-weight: 500
+                    text-transform: uppercase
+                    margin-left: 18px
+                    font-size: 11px
+                    @media only screen and (min-width: 468px)
+                        font-size: 12px
+                        margin-left: 25px
+
+            .inc
+                font-size: 14px
+                color: rgb(214, 100, 67)
+                margin-top: 5px
+
+            .MainActnSec
+                margin-top: 30px
+                ul
+                    margin: -7.5px
+                    @include display
+                    li
+                        padding: 7.5px
+                    .IncrementCounter
+                        border-color: $basecolor
+                        @media only screen and (min-width: 468px)
+                            padding: 0 20px
+                            height: 50px
+                    .FavBtn
+                        color: rgb(54, 54, 54)
+                        text-transform: uppercase
+                        background: none
+                        min-width: auto
+                        border-color: #e6e1dd
+                        font-size: 0px
+                        @media only screen and (min-width: 468px)
+                            font-size: 14px
+                            min-width: 185px
+                        span
+                            display: grid
+                            display: -ms-grid
+                            display: -moz-grid
+                        svg
+                            fill: rgba(0, 0, 0, 0.50)
+                            @media only screen and (max-width: 468px)
+                                margin: 0
+                        &.Isactive
+                            color: #ff4343
+                            border-color: #ff4343
+                            background: #ff43431f
+                            svg
+                                fill: #ff4343
+            .Breif
+                margin-top: 30px
+                color: rgb(45, 45, 45)
+                line-height: 20px
+                font-size: 13px
+                @media only screen and (min-width: 468px)
+                    font-size: 14px
+            .btn
+                height: 44px
+                @media only screen and (min-width: 468px)
+                    height: 50px
+                svg
+                    margin-right: 20px
+                    width: 20px
+            .BtnSec
+                padding-top: 25px
+                margin: -7.5px
+                @include display
+                @media only screen and (min-width: 468px)
+                    padding-top: 30px
+                >*
+                    padding: 7.5px
+                    width: 100%
+                    @media only screen and (min-width: 410px)
+                        width: 50%
+                a
+                    width: 100%
+                .btn
+                    font-family: $fontstack2
+                    @media only screen and (min-width: 1551px)
+                        font-size: 16px
+                    svg
+                        fill: #fff
+                        .st0
+                            fill-rule: evenodd
+                            clip-rule: evenodd
+
+                    &.BuY
+                        color: rgb(38, 37, 36)
+                        text-transform: uppercase
+                        background: none
+                        &:hover
+                            color: #fff
+            .accordion
+                margin-top: 20px
+                .accordion-item
+                    background: none
+                    border: none
+                    box-shadow: none
+                    border-bottom: 1px solid rgb(255, 232, 216)
+                .accordion-header
+                    background: none
+                    border: none
+                    box-shadow: none
+                .accordion-button
+                    color: rgb(45, 45, 45)
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    padding: 0
+                    background: none
+                    border: none
+                    box-shadow: none
+                    font-size: 14px
+                    height: 45px
+                    @media only screen and (min-width: 468px)
+                        height: 60px
+                        font-size: 16px
+                    svg
+                        fill: $basecolor
+                        width: 12px
+                        @media only screen and (min-width: 468px)
+                            width: 14px
+                    &::after
+                        display: none
+                    &[aria-expanded="true"]
+                        svg
+                            .Vertical
+                                opacity: 0
+                .accordion-body
+                    padding: 0
+                    padding-bottom: 22px
+                    *
+                        color: rgb(45, 45, 45)
+                        line-height: 22px
+                        font-size: 13px
+                        @media only screen and (min-width: 468px)
+                            font-size: 14px
+                    ul
+                        margin: 0
+                        padding: 0
+                    li
+                        position: relative
+                        &:not(:last-of-type)
+                            margin-top: 5px
+                        &::before
+                            content: "*"
+                            margin-right: 10px
+            .PaYMethds
+                margin-top: 30px
+                @include display
+                @media only screen and (min-width: 576px)
+                    margin-top: 50px
+                .label
+                    color: rgb(122, 120, 120)
+                    line-height: 14px
+                    width: 130px
+                    font-size: 13px
+                    @media only screen and (min-width: 468px)
+                        font-size: 14px
+                img
+                    max-width: 330px
+                    width: 100%
+                    padding-top: 15px
+                    @media only screen and (min-width: 576px)
+                        padding-top: 0px
+                        padding-left: 25px
+                        width: calc(100% - 130px)
+
+    #RelatedPro
+        background: #fff
+        padding: 45px 0 50px
+        @media only screen and (min-width: 468px)
+            padding: 55px 0 65px
+        @media only screen and (min-width: 576px)
+            padding: 75px 0 85px
+        @media only screen and (min-width: 1200px)
+            padding: 85px 0 100px

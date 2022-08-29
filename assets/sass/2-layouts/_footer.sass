@@ -1,0 +1,212 @@
+//FOOTER
+/************ ****** ************/
+/************ FOOTER ************/
+/************ ****** ************/
+footer
+    background: $basecolor2
+    #FootMain
+        padding: 50px 0 35px
+        @media screen and (min-width: 468px)
+            padding: 60px 0 45px
+        @media screen and (min-width: 768px)
+            padding: 70px 0 60px
+        .row
+            margin: -20px
+            @media screen and (min-width: 468px)
+                margin: -25px
+            @media screen and (min-width: 576px)
+                margin: -15px
+            >*
+                padding: 20px
+                @media screen and (min-width: 468px)
+                    padding: 25px
+                @media screen and (min-width: 576px)
+                    padding: 15px
+                &:nth-child(1)
+                    @media screen and (min-width: 1551px)
+                        width: 19.5%
+                &:nth-child(2)
+                    @media screen and (min-width: 1200px)
+                        width: 20%
+                    @media screen and (min-width: 1551px)
+                        width: 21.5%
+                &:nth-child(3)
+                    @media screen and (min-width: 1200px)
+                        width: 29.2%
+                    @media screen and (min-width: 1551px)
+                        width: 28.2%
+                &:nth-child(4)
+                    @media screen and (min-width: 1200px)
+                        width: 33.8%
+                    @media screen and (min-width: 1551px)
+                        width: 30.8%
+
+        .FootHead
+            font-size: 14px
+            font-family: $fontstack2
+            color: $baselit
+            text-transform: uppercase
+            font-weight: 300
+            margin-bottom: 25px
+            @media screen and (min-width: 992px)
+                margin-bottom: 40px
+        li, a, p
+            font-size: 13px
+            color: rgb(255, 255, 255)
+        a
+            svg
+                transition: all .03s
+            &:hover
+                color: $baselit
+                svg
+                    fill: $baselit
+        .QckLinks
+            li
+                &:not(:last-of-type)
+                    margin-bottom: 15px
+                li
+                    display: flex
+        .NewsLetter
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2)
+            padding-bottom: 20px
+            margin-bottom: 30px
+            .form-group
+                display: flex
+                flex-wrap: wrap
+                #MailIcon
+                    width: 25px
+                    height: 25px
+                    fill: $baselit
+                input
+                    height: 25px
+                    border: none
+                    padding: 0
+                    padding-left: 20px
+                    font-size: 14px
+                    color: rgb(255, 255, 255)
+                    width: calc(100% - 47px)
+                    &::placeholder
+                        transition: all .3s
+                        color: rgb(255, 255, 255)
+                    &:hover
+                        &::placeholder
+                            color: rgba(255, 255, 255, 0.50)
+
+                button
+                    min-width: auto
+                    width: 22px
+                    height: 25px
+                    padding: 0
+                    margin: 0
+                    border: none
+                    outline: none
+                    background: none
+                    @include center
+                    svg
+                        width: 10px
+                        fill: #fff
+                        fill-rule: evenodd
+                        stroke: rgb(255, 255, 255)
+                        stroke-width: 1px
+                        stroke-linecap: butt
+                        stroke-linejoin: miter
+                        fill: none
+        .Follow
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .label
+                font-size: 14px
+                color: rgb(255, 255, 255)
+                margin-right: 45px
+                @media screen and (min-width: 1200px)
+                    margin-right: 65px
+                @media screen and (min-width: 1551px)
+                    margin-right: 85px
+            ul
+                display: flex
+                align-items: center
+                li
+                    &:not(:last-of-type)
+                        margin-right: 20px
+                        @media screen and (min-width: 1200px)
+                            margin-right: 40px
+                        @media screen and (min-width: 1551px)
+                            margin-right: 50px
+                svg
+                    width: 16px
+                a
+                    &:not(:hover)
+                        svg
+                            fill: #fff
+        .AvalOptns
+            margin-top: 30px
+            text-align: center
+            @media screen and (min-width: 992px)
+                text-align: left
+                display: flex
+                justify-content: flex-end
+            >*
+                &:not(:last-of-type)
+                    margin-bottom: 25px
+                @media screen and (min-width: 992px)
+                    display: flex
+                    align-items: center
+                    &:not(:last-of-type)
+                        margin-bottom: 0px
+                        margin-right: 65px
+            .label
+                font-size: 14px
+                font-family: $fontstack2
+                color: rgb(145, 144, 144)
+                margin-bottom: 15px
+                @media screen and (min-width: 992px)
+                    margin-bottom: 0px
+                    margin-right: 20px
+            .PaYMethds
+                img
+                    max-width: 270px
+                    @media screen and (min-width: 468px)
+                        max-width: 305px
+                    @media screen and (min-width: 1200px)
+                        max-width: 353px
+            ul
+                display: flex
+                align-items: center
+                margin: 0 -5px
+                justify-content: center
+                @media screen and (min-width: 992px)
+                    margin: 0 -10px
+                    justify-content: flex-end
+                li
+                    padding: 0 5px
+                    @media screen and (min-width: 992px)
+                        padding: 0 10px
+                    a
+                        display: block
+                        width: 120px
+                        @media screen and (min-width: 1200px)
+                            width: 140px
+    #copYRight
+        border-top: 1px solid rgba(255, 255, 255, 0.149)
+        padding: 25px 0 20px
+        @media screen and (min-width: 468px)
+            padding: 35px 0 30px
+        .flexRow
+            font-size: 12px
+            font-family: $fontstack2
+            color: rgb(255, 255, 255)
+            text-transform: uppercase
+            letter-spacing: 1px
+            text-align: center
+            @media screen and (min-width: 768px)
+                text-align: left
+                display: flex
+                align-items: center
+                justify-content: space-between
+        span, a
+            color: $baselit
+        .lftSec
+            margin-bottom: 15px
+            @media screen and (min-width: 768px)
+                margin-bottom: 0px

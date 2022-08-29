@@ -1,0 +1,433 @@
+// layout
+#pageWrapper
+    overflow: hidden
+    margin-top: 97px
+    @media only screen and (min-width: 468px)
+        margin-top: 118px
+    @media only screen and (min-width: 992px)
+        margin-top: 137px
+    @media only screen and (min-width: 1200px)
+        margin-top: 193px
+
+.FloralBG
+    background: rgb(255, 245, 237) url('../images/BGPatern.webp') repeat
+// COMMON TITLE
+.ComTitle
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+    @media only screen and (min-width: 468px)
+        margin-bottom: 30px
+    .SecName
+        font-family: $fontstack2
+        color: rgb(37, 37, 37)
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 18px
+        @media only screen and (min-width: 468px)
+            font-size: 24px
+    .ViewAll
+        color: rgb(40, 40, 40)
+        font-size: 12px
+        @media only screen and (min-width: 468px)
+            font-size: 15px
+        &:hover
+            letter-spacing: 1.2px
+            color: $basecolor
+// HEADINGS
+.MainHead
+    text-align: center
+    margin-bottom: 20px
+    @media only screen and (min-width: 468px)
+        margin-bottom: 25px
+    @media only screen and (min-width: 992px)
+        margin-bottom: 35px
+    @media only screen and (min-width: 1200px)
+        margin-bottom: 55px
+    .Head
+        color: $basecolor
+        font-family: $fontstack2
+        text-transform: uppercase
+        font-size: 20px
+        margin-bottom: 10px
+        letter-spacing: 1px
+        @media only screen and (min-width: 468px)
+            font-size: 24px
+            margin-bottom: 12px
+
+    .Tagline
+        color: $text
+        font-weight: 300
+        font-size: 13px
+        line-height: 20px
+        @media only screen and (min-width: 992px)
+            font-size: 15px
+// COMMON HEADINGS
+
+// BUTTON STYLE
+.hoveranim
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    overflow: hidden
+    &::before
+        content: ''
+        position: absolute
+        z-index: 0
+        top: 0
+        bottom: 0
+        width: 100%
+        background: $basecolor2
+        -webkit-transform: scaleX(0)
+        -ms-transform: scaleX(0)
+        transform: scaleX(0)
+        -webkit-transition: -webkit-transform 0.3s ease
+        transition: -webkit-transform 0.3s ease
+        transition: transform 0.3s ease
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease
+        left: 0
+        -webkit-transform-origin: right
+        -ms-transform-origin: right
+        transform-origin: right
+    span
+        position: relative
+        z-index: 1
+    &:hover
+        color: #fff
+        &::before
+            -webkit-transform-origin: left
+            -ms-transform-origin: left
+            transform-origin: left
+            -webkit-transform: scaleX(1)
+            -ms-transform: scaleX(1)
+            transform: scaleX(1)
+
+.owl-dots
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 25px
+    @media only screen and (min-width: 468px)
+        margin-top: 35px
+    @media only screen and (min-width: 768px)
+        margin-top: 45px
+    .owl-dot
+        border-radius: 50%
+        background-color: rgb(86, 86, 86) !important
+        opacity: 0.2 !important
+        transition: all .3s
+        width: 9px
+        height: 9px
+        @media only screen and (min-width: 576px)
+            width: 13px
+            height: 13px
+        &:not(:last-of-type)
+            margin-right: 15px
+            @media only screen and (min-width: 576px)
+                margin-right: 24px
+        &.active
+            opacity: 1 !important
+            background: $basecolor !important
+
+// INNER PAGE
+
+#PageBanner
+    height: 220px
+    @media only screen and (min-width: 468px)
+        height: 310px
+    @media only screen and (min-width: 768px)
+        height: 375px
+    @media only screen and (min-width: 1200px)
+        height: 475px
+    @media only screen and (min-width: 1551px)
+        height: 570px
+    .container
+        position: relative
+        z-index: 1
+        height: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        padding-bottom: 40px
+        @media only screen and (min-width: 468px)
+            padding-bottom: 55px
+        @media only screen and (min-width: 768px)
+            padding-bottom: 80px
+    .BannerCntnt
+        text-align: center
+        .PageTitle
+            font-weight: 300
+            font-family: $fontstack2
+            color: rgb(255, 255, 255)
+            text-transform: uppercase
+            letter-spacing: 1px
+            margin-bottom: 10px
+            font-size: 24px
+            @media only screen and (min-width: 468px)
+                font-size: 35px
+            @media only screen and (min-width: 768px)
+                margin-bottom: 15px
+                font-size: 38px
+            @media only screen and (min-width: 1200px)
+                font-size: 45px
+        .PageInfo
+            color: rgb(255, 255, 255)
+            letter-spacing: 1px
+            font-size: 10px
+            @media only screen and (min-width: 468px)
+                font-size: 11px
+            @media only screen and (min-width: 768px)
+                font-size: 13px
+            @media only screen and (min-width: 1200px)
+                font-size: 14px
+
+#BreadCrumb
+    padding: 12px 0
+    @media only screen and (min-width: 468px)
+        padding: 20px 0
+    ul
+        display: flex
+        align-items: center
+        li
+            display: flex
+            align-items: center
+            &:not(:last-of-type)
+                &::after
+                    content: "/"
+                    color: rgb(159, 159, 159)
+                    margin: 0 7px 0 4px
+                    font-size: 12px
+                    @media only screen and (min-width: 468px)
+                        font-size: 14px
+            a
+                color: rgb(159, 159, 159)
+                display: block
+                text-transform: capitalize
+                letter-spacing: 1px
+                font-size: 12px
+                @media only screen and (min-width: 468px)
+                    font-size: 14px
+                &.current
+                    color: $basecolor
+// MODAL
+.ComnModal
+    padding: 0px
+    z-index: 999999
+    .modal-dialog
+        width: 100%
+        max-width: 620px
+        margin: auto
+        height: 100%
+        display: flex
+        align-items: center
+        -webkit-transform: translate(0, 0px)
+        transform: translate(0, 0px)
+    .modal-content
+        border: none
+        background: #fff
+        border-radius: 0
+    .ModalHeader
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 19px 15px
+        position: relative
+        background: $basecolor
+        display: flex
+        .title
+            font-size: 15px
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            color: #fff
+            letter-spacing: 1px
+        .close
+            border-radius: 0px
+            border: none
+            outline: none
+            box-shadow: none
+            font-size: 23px
+            padding: 0
+            width: 45px
+            position: absolute
+            right: 0
+            height: 100%
+            top: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            background: $basecolor2
+            font-size: 28px
+            color: #fff
+    .modal-body
+        padding: 23px 25px 30px
+        @media only screen and (min-width: 468px)
+            padding: 30px 35px 35px
+        .form-group
+            label
+                @media only screen and (min-width: 468px)
+                    font-size: 11px
+        .form-control, [type=file]
+            border-color: #b6b6b6
+        .submit
+            background: $basecolor2
+            border-color: $basecolor2
+            &::before
+                background: $basecolor
+
+    &.sucessModal
+        text-align: center
+        .modal-dialog
+            max-width: 420px
+        .modal-body
+            min-height: 278px
+            display: flex
+            flex-wrap: wrap
+            align-content: center
+            justify-content: center
+        .iCon
+            background: #5b9f33
+            border-radius: 50%
+            width: 80px
+            height: 80px
+            margin: auto
+            padding: 10px
+            margin-bottom: 20px
+            @include center
+            @media only screen and (min-width: 468px)
+                width: 100px
+                height: 100px
+                margin-bottom: 25px
+            svg
+                width: 30px
+                fill: #fff
+                @media only screen and (min-width: 468px)
+                    width: 50px
+        p
+            margin: 0
+            font-weight: 500
+
+// MODAL
+.CoMModal
+    padding: 0
+    z-index: 999999
+    .modal-dialog
+        margin: auto
+        -webkit-transform: translate(0, 0px) !important
+        transform: translate(0, 0px) !important
+        max-width: 100%
+        @media only screen and (min-width: 992px)
+            height: 100vh
+            display: flex
+            align-items: center
+            justify-content: center
+            max-width: 365px
+    .modal-content
+        border: none
+        background: $white
+        border-radius: 0
+        min-height: 100vh
+        @media only screen and (min-width: 992px)
+            height: auto
+            min-height: auto
+    .ModalHeader
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 19px 15px
+        position: relative
+        border-bottom: 1px solid rgba(221,235,227,.1)
+        background: $basecolor
+        display: flex
+        .title
+            font-size: 15px
+            font-weight: 600
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            color: white
+            @media only screen and (min-width: 992px)
+                font-size: 18px
+
+            svg
+                width: 19px
+                fill: #fff
+                margin-right: 13px
+        .close
+            border-radius: 0px
+            border: none
+            outline: none
+            box-shadow: none
+            font-size: 23px
+            padding: 0
+            width: 45px
+            position: absolute
+            right: 0
+            height: 100%
+            top: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            background: rgb(43, 45, 45)
+            font-size: 28px
+            color: white
+    .modal-body
+        padding: 15px
+        .maxCntnt
+            @media only screen and (min-width: 992px)
+                overflow-y: scroll
+                max-height: 45vh
+        h1, h2, h3
+            color: #323232
+            letter-spacing: 1px
+            text-transform: uppercase
+            font-size: 20px
+            margin-bottom: 10px
+            @media only screen and (min-width: 468px)
+                font-size: 22px
+                margin-bottom: 15px
+
+        h4, h5, h6
+            color: #323232
+            letter-spacing: 1px
+            text-transform: uppercase
+            font-size: 18px
+            margin-bottom: 10px
+            @media only screen and ( min-width: 468px )
+                font-size: 20px
+                margin-bottom: 15px
+        p
+            color: #535353
+        .form-group
+            label
+                @media only screen and (min-width: 468px)
+                    font-size: 11px
+        .form-control, [type=file]
+            border-color: #b6b6b6
+        .submit
+            background: $basecolor2
+            border-color: $basecolor2
+            &::before
+                background: $basecolor
+    .modal-footer
+        padding: 0
+        background: rgb(232, 235, 240)
+        .btn
+            background: $basecolor
+            border-radius: 0px
+            border: none
+            outline: none
+            box-shadow: none
+            font-size: 12px
+            text-transform: uppercase
+            color: $white
+            font-weight: 500
+            width: 50%
+            margin: 0
+            height: 40px
+            max-width: 100%
+            &.clear
+                background: transparent
+                color: $basecolor2

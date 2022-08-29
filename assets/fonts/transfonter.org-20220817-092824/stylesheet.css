@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Buttey Honey';
+    src: url('ButteyHoney.woff2') format('woff2'),
+        url('ButteyHoney.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
